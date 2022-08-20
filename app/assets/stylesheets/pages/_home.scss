@@ -1,1 +1,59 @@
 // Specific CSS for your home-page
+.banner {
+  text-align: center;
+  // margin-left: 100px;
+  // margin-right: 100px;
+}
+.CTA {
+  text-align: center;
+  height: 300px;
+  width: auto;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: #cdf0ea;
+  color: white;
+  padding: 80px 0;
+  // margin-left: 100px;
+  // margin-right: 100px;
+}
+.CTA h3 {
+  padding-bottom: 50px;
+}
+
+.landing-img {
+  background-image: url("app/assets/images/profiles.jpeg");
+  object-fit: cover;
+  height: 500px;
+  width: auto;
+  padding-left: 100px;
+  padding-right: 100px;
+  text-align: right;
+  background-color: #cdf0ea;
+  color: white;
+  padding-top: 150px;
+  // margin-left: 100px;
+  // margin-right: 100px;
+}
+
+.footer {
+  text-align: center;
+  // margin-left: 100px;
+  // margin-right: 100px;
+}
+
+.btn-succes {
+  text-decoration: none;
+  // background-color: #ffd9c0;
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: #7897ab;
+  text-shadow: 2px;
+  border: solid grey 1px;
+  background-color: #cdf0ea;
+  opacity: 0.5;
+}
+
+.btn-succes:hover {
+  font-weight: bold;
+
+}
