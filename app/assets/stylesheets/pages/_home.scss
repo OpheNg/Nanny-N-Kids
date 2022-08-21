@@ -26,11 +26,13 @@
   object-fit: cover;
   height: 500px;
   width: auto;
-  padding-right: 200px;
+  padding: 100px 80px;
   text-align: right;
   background-color: #cdf0ea;
   color: white;
-  padding-top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
   // margin-left: 100px;
   // margin-right: 100px;
