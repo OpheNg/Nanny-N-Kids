@@ -1,0 +1,104 @@
+h1 {
+  color:#7897ab ;
+  font-weight: bolder;
+  margin-left: 60px;
+  margin-top: 32px;
+  font-size: 48px;
+}
+body {
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_38/v1661094011/Nanny%20N%20Kids/kelli-tungay-2LJ4rqK2qfU-unsplash_zvtgzg.jpg');
+  object-fit: cover;
+  background-size: 100%;
+  // background: linear-gradient(to right, silver, white);
+  background: gradient(90deg,white);
+
+  }
+
+.dash {
+  display: flex;
+  margin-right: 60px;
+
+}
+
+.side {
+  margin: 80px 100px;
+  padding: 16px 40px;
+  background-color: #cdf0ea;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px #7897ab;
+  text-align: center;
+  color: white;
+  width: 300px;
+
+}
+.side .notif li{
+  text-align: left;
+  list-style-type: none;
+  padding-left: 0;
+}
+.side .notif i {
+  color: #0A98DD;
+  padding-right: 6px;
+}
+.side a {
+  text-decoration: none;
+  color: #7897ab;
+}
+.side a:hover {
+  color: #0A98DD;
+}
+.side h3 {
+  color: #7897ab;
+}
+.avatar {
+  width: 150px;
+  padding: 24px 0;
+}
+.container {
+  margin-top: 80px;
+}
+
+.cards{
+  overflow: hidden;
+  height: 120px;
+  width: 600px;
+  background: white;
+  box-shadow: 0 0 15px rgba(69, 68, 68, 0.2);
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+  margin-bottom: 8px;
+  border-radius: 2px;
+}
+
+.cards img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+  border-radius: 0px;
+}
+
+.cards h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cards p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.cards .card-action {
+  padding: 16px;
+}
+
+.card-action h2 {
+  color:#0A98DD;
+}
+.card-action p {
+  color:#7897ab;
+}
