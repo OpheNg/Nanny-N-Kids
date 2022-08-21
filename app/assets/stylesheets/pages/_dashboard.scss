@@ -1,9 +1,21 @@
-h1 {
+
+.top {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.top h1 {
   color:#7897ab ;
   font-weight: bolder;
   margin-left: 60px;
   margin-top: 32px;
   font-size: 48px;
+}
+.top .blue {
+  color: #43a5d5;
+  font-size: 32px;
+  margin-right: 60px;
 }
 body {
   background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_38/v1661094011/Nanny%20N%20Kids/kelli-tungay-2LJ4rqK2qfU-unsplash_zvtgzg.jpg');
