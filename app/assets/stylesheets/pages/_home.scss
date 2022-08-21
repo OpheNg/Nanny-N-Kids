@@ -21,17 +21,21 @@
   background-color: #cdf0ea;
   color: #7897ab;
   padding: 80px 0;
+
   // margin-left: 100px;
   // margin-right: 100px;
 }
-.CTA h3 {
-  padding-bottom: 50px;
+// .CTA h3 {
+//   padding-bottom: 50px;
+// }
+.CTA p{
+  padding-bottom: 24px;
+  font-size: 10px;
 }
-
 .landing-img {
   background-image: url("app/assets/images/profiles.jpeg");
   object-fit: cover;
-  height: 500px;
+  height: 700px;
   width: auto;
   padding: 100px 80px;
   text-align: right;
@@ -47,22 +51,28 @@
 .landing-img h3 {
   line-height: 48px;
 }
+.landing-img .grey{
+  color: #7897ab; ;
+}
 
-.btn-succes {
+.landing-img h3 .btn-succes a {
   text-decoration: none;
-  // background-color: #ffd9c0;
   padding: 8px 16px;
   border-radius: 4px;
   color: #7897ab;
   text-shadow: 2px;
   border: solid grey 1px;
-  background-color: #cdf0ea;
+  background-color: rgba(205, 240, 234, 0.4);
   opacity: 0.5;
+  margin: 0 24px;
+  font-size: 20px;
+  justify-content: space-around;
 }
 
-.btn-succes:hover {
+.landing-img h3 .btn-succes a:hover {
   font-weight: bold;
-
+  color: #0A98DD;
+  box-shadow: 2px 2px 2px #7897ab;
 }
 img {
   border-radius: 5px;
@@ -70,7 +80,9 @@ img {
 
 .footer {
   text-align: center;
-  padding: 32px 0;
+  line-height: 8px;
+  padding-top: 32px;
+  padding-bottom: 8px;
   // margin-left: 100px;
   // margin-right: 100px;
 }
@@ -84,6 +96,10 @@ img {
 
 .footer p{
   font-size: 10px;
+}
+
+.footer .info i{
+  font-size: 16px;
 }
 .footer .follow {
   font-size: 16px;
