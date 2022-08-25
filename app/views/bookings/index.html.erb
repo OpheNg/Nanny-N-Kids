@@ -1,0 +1,13 @@
+<h1>Index Bookings - PAST & INCOMING BOOKINGS</h1>
+
+<%= 'Blablabla' %>
+
+<ul>
+  <% @bookings.each do |booking| %>
+    <li><%= link_to "The booking", booking %>, <strong>id : <%= booking.id %></strong></li>
+    <li>start date : <%=  booking.start_date %></li>
+    <li>end date : <%= booking.end_date %></li>
+    <li>Price !👉<%= booking.total_price %></li>
+    <% end %>
+</ul>
+
