@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get 'account', to: 'pages#account'
   get 'dashboard', to: 'pages#dashboard'
+  get 'profile', to: 'pages#profile'
 
   resources :user
   resources :nanny
