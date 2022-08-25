@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'profile', to: 'users#profile'
   get 'dashboard', to: 'users#dashboard'
-
+ 
 
 
   # resources :user
