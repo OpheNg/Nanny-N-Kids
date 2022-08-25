@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
-  def home
+  def landing
   end
 
-  def account
+  def profile
   end
 
   def dashboard
