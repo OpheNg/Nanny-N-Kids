@@ -22,11 +22,12 @@
     <br><br>
       Check out the nannies profiles, <br> Propose your services <br><br>
         <span class ="btn-succes">
-          <a href="#">Register</a>
+          <%# <a href="#">Register</a> %>
+          <%= link_to "Register", new_user_session_path, class: "nav-link" %>
         </span>
-        <span class ="btn-succes">
-          <%= link_to "Log in", dashboard_path %>
-        </span>
+        <%# <span class ="btn-succes">
+         <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        <%# </span> %>
   </h3>
 </div>
 

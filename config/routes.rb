@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#landing'
 
-  get 'account', to: 'pages#account'
-  get 'dashboard', to: 'pages#dashboard'
+  get 'profile', to: 'users#profile'
+  get 'dashboard', to: 'users#dashboard'
+
+
 
   # resources :user
   resources :nanny
