@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'users#dashboard'
  
 
+  #création d'une nouvelle route pour avoir un url de type /users/1 qui redirige vers la page dashboard
+  get '/users/:id', to: 'users#dashboard', as: 'user'
 
   # resources :user
   resources :nanny
