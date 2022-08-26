@@ -107,6 +107,8 @@ body {
 }
 
 
+// // CARDS
+// _______________________________________________________________________
 .cards{
   height: 360px;
   // max-width: 500px;
@@ -126,6 +128,7 @@ body {
 //   object-fit: cover;
 //   border-radius: 0px;
 // }
+
 
 .cards h2 {
   font-size: 20px;
@@ -149,5 +152,152 @@ body {
   color:#0A98DD;
 }
 .card-action p {
+  color:#7897ab;
+}
+// ___________________________________________________________________
+
+.cards_family{
+  height: 360px;
+  // max-width: 500px;
+  background: #ccf0e3;
+  box-shadow: 0 0 15px rgba(69, 68, 68, 0.2);
+  // display: flex;
+  // align-items: center;
+  margin: 8px;
+  border-radius: 4px;
+  // padding: 16px;
+  text-align: center;
+}
+
+.cards_family h2{
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cards_family p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+.cards_family .card-action {
+  padding: 16px;
+}
+.cards_family .card-action h2 {
+  color:#0A98DD;
+}
+.cards_family .card-action p {
+  color:#7897ab;
+}
+// _______________________________________________________
+.cards_nanny{
+  height: 360px;
+  // max-width: 500px;
+  background: #b6d5f8;
+  box-shadow: 0 0 15px rgba(69, 68, 68, 0.2);
+  // display: flex;
+  // align-items: center;
+  margin: 8px;
+  border-radius: 4px;
+  // padding: 16px;
+  text-align: center;
+}
+
+.cards_nanny h2{
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cards_nanny p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+.cards_nanny .card-action {
+  padding: 16px;
+}
+.cards_nanny .card-action h2 {
+  color:#0A98DD;
+}
+.cards_nanny .card-action p {
+  color:#7897ab;
+}
+// ________________________________________________________________
+
+.cards_bookings{
+  height: 360px;
+  // max-width: 500px;
+  background: #cdc9ea;
+  box-shadow: 0 0 15px rgba(69, 68, 68, 0.2);
+  // display: flex;
+  // align-items: center;
+  margin: 8px;
+  border-radius: 4px;
+  // padding: 16px;
+  text-align: center;
+}
+
+.cards_bookings h2{
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cards_bookings p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+.cards_bookings .card-action {
+  padding: 16px;
+}
+.cards_bookings .card-action h2 {
+  color:#0A98DD;
+}
+.cards_bookings .card-action p {
+  color:#7897ab;
+}
+// ________________________________________________________________
+
+.cards_mess{
+  height: 360px;
+  // max-width: 500px;
+  background: #d8d8d8;
+  box-shadow: 0 0 15px rgba(69, 68, 68, 0.2);
+  // display: flex;
+  // align-items: center;
+  margin: 8px;
+  border-radius: 4px;
+  // padding: 16px;
+  text-align: center;
+}
+
+.cards_mess h2{
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cards_mess p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+.cards_mess .card-action {
+  padding: 16px;
+}
+.cards_mess .card-action h2 {
+  color:#0A98DD;
+}
+.cards_mess .card-action p {
   color:#7897ab;
 }
