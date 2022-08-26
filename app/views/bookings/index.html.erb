@@ -14,10 +14,13 @@
     <li>end date : <%= booking.end_date %></li>
     <li>status : <%= booking.status %></li>
     <li>Price !👉<%= booking.total_price %></li>
+    <%= link_to "The booking", user_booking_path(booking.user.id, booking.id) %>
   </div>
     <% end %>
 
 </ul>
+
+<%# user_bookings_path(@user.id) %>
 
 <%= link_to "Back", :back %>
 
