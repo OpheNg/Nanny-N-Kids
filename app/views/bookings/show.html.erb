@@ -27,8 +27,8 @@
         </thead>
         <tbody>
             <tr>
-                <td class="tg-0lax"><%= @booking.end_date %></td>
                 <td class="tg-0lax"><%= @booking.start_date %></td>
+                <td class="tg-0lax"><%= @booking.end_date %></td>
             </tr>
         </tbody>
     </table>
@@ -43,4 +43,5 @@
     <p><%= @booking.total_price %> €</p>
 </div>
 
+<%= link_to "Back to Index", user_bookings_path(@booking.user.id) %>
 <%= link_to "Back", :back %>

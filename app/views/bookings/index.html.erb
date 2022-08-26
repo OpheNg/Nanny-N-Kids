@@ -1,21 +1,20 @@
 <h1>Index Bookings - PAST & INCOMING BOOKINGS</h1>
 <br>
-<%= link_to "New Booking - NE FONCTIONNE PAS", new_user_booking_path %>
-<%= link_to 'NEW BOOKING 2', new_user_booking_path(@user.id) %>
+<%# <%= link_to "New Booking - NE FONCTIONNE PAS", new_user_booking_path %>
+<%= link_to 'NEW BOOKING', new_user_booking_path(@user.id) %>
 <br>
 <ul>
 
   <% @bookings.each do |booking| %>
   <div>
   <br>
-    <%# <li><%= link_to "The booking", booking %>, <strong>id : <%= booking.id %></strong></li>
+    <%# <li><%= link_to "The booking", booking %>, <strong><%= link_to "id :", user_booking_path(booking.user.id, booking.id) %><%= booking.id %></strong></li>
     <li>user id : <%= booking.user.id %></li>
     <li>nanny id : <%= booking.nanny.id %></li>
     <li>start date : <%=  booking.start_date %></li>
     <li>end date : <%= booking.end_date %></li>
     <li>status : <%= booking.status %></li>
     <li>Price !👉<%= booking.total_price %></li>
-    <%= link_to "The booking", user_booking_path(booking.user.id, booking.id) %>
     <%= link_to "Edit the booking", edit_user_booking_path(booking.user.id, booking.id) %>
   </div>
     <% end %>
