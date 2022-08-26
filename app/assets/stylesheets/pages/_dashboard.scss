@@ -52,7 +52,7 @@ body {
   box-shadow: 1px 2px 2px 1px  #7897ab;
   height: 500px;
   padding-top: 20px;
-  background-color: white;
+  background-color: #fdeedc;
 }
 
 .side .callendar{
@@ -300,4 +300,20 @@ body {
 }
 .cards_mess .card-action p {
   color:#7897ab;
+}
+
+// ____________________________________________
+
+.container .cards_mess img {
+  padding-top: 16px;
+}
+
+.container .cards_bookings img {
+  padding-top: 40px;
+}
+.container .cards_nanny img {
+  padding-top: 32px;
+}
+.container .cards_family img {
+  padding-top: 24px;
 }
