@@ -1,0 +1,69 @@
+<div class="top">
+  <h1><i class="fa-regular fa-calendar-days"> </i> My Dashboard </h1>
+  <h1 class="blue"> Nanny & Kids </h1>
+</div>
+<%# #ca marche passsssss# %>
+<div class="welcome">
+  <% if user_signed_in? %>
+    <h3>Logged as:<% current_user.email %></h3>
+  <% end %>
+</div>
+
+<div class="dash">
+   <div class="side">
+    <h3>User profile</h3>
+    <img class="avatar"src="https://via.placeholder.com/150" alt="user pic">
+    <p>Sunday, 21st August 2022</p>
+    <ul class="notif">
+      <li><i class="fa-solid fa-bell"></i><a href="#">Notifications</a></li>
+      <li><i class="fa-solid fa-gear"></i><a href="#">Settings</a></li>
+      <li><i class="fa-solid fa-right-from-bracket"></i><%= link_to "Log out", root_path %></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="cards">
+        <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661087828/Nanny%20N%20Kids/urafamily_p3o3ed.jpg",
+          width: 100, height: 100, crop: :fill)%>
+        <div class="card-action">
+          <h2>You are a Family</h2>
+          <p>You need a Nanny ? click <strong>here</strong> to start your search.</p>
+        </div>
+    </div>
+
+    <div class="cards">
+      <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661087828/Nanny%20N%20Kids/urananny_e9e0pj.jpg",
+            width: 100, height: 100, crop: :fill)%>
+        <div class="card-action">
+          <h2>You are a Nanny</h2>
+          <p>You wanna propose your services ? click <strong>here</strong> and find a family.</p>
+        </div>
+    </div>
+
+    <div class="cards">
+      <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661089186/Nanny%20N%20Kids/jeshoots-com-9n1USijYJZ4-unsplash_bb0se0.jpg",
+            width: 100, height: 100, crop: :fill)%>
+        <div class="card-action">
+          <h2>Bookings</h2>
+          <p>Take a look at your <strong>past & incoming</strong> reservations.</p>
+        </div>
+    </div>
+
+    <div class="cards">
+      <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661089353/Nanny%20N%20Kids/jeshoots-com-Lu9FNRCqPys-unsplash_hszuse.jpg",
+            width: 100, height: 100, crop: :fill)%>
+        <div class="card-action">
+          <h2>Messages</h2>
+          <p>Check out your <strong>conversation feed</strong>.</p>
+        </div>
+    </div>
+  </div>
+
+
+</div>
+<br>
+<br>
+<br>
+
+
+<%# <a href="#">Log out</a> %>
