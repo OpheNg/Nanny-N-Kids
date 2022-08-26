@@ -1,6 +1,7 @@
 <h1>Index Bookings - PAST & INCOMING BOOKINGS</h1>
 <br>
 <%= link_to "New Booking - NE FONCTIONNE PAS", new_user_booking_path %>
+<%= link_to 'NEW BOOKING 2', new_user_booking_path(@user.id) %>
 <br>
 <ul>
 
@@ -15,6 +16,7 @@
     <li>status : <%= booking.status %></li>
     <li>Price !👉<%= booking.total_price %></li>
     <%= link_to "The booking", user_booking_path(booking.user.id, booking.id) %>
+    <%= link_to "Edit the booking", edit_user_booking_path(booking.user.id, booking.id) %>
   </div>
     <% end %>
 

@@ -1,0 +1,18 @@
+<h1> Edit your Booking </h1>
+
+<h2> Movie selected : </h2>
+<ul>
+    <%= @booking.id %>
+    <%= @booking.start_date %>
+    <%= @booking.end_date %>
+    <%= @booking.nanny.id %>
+</ul>
+
+<h3>Please update the info by filling this form</h3>
+
+<%= simple_form_for @booking do |f| %>
+  <%= f.input :end_date %>
+  <%= f.button :submit %>
+<% end %>
+
+<%= link_to "Back to index", bookings_path %>
