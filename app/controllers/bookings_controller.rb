@@ -30,14 +30,18 @@ class BookingsController < ApplicationController
 
 
     def edit
+        @user = User.find(params[:user_id])
         @booking = Booking.find(params[:id])
     end
 
     def update
         @booking = Booking.find(params[:id])
 
+        @user = User.find(params[:user_id])
+        @booking.user = @user
+
         if @booking.update(booking_params_update)
-            redirect_to @booking
+            redirect_to user_booking_path(@booking.user.id, @booking.id)
         else
         end
     end
@@ -48,6 +52,10 @@ class BookingsController < ApplicationController
 
     def booking_params
         params.require(:booking).permit(:end_date, :start_date, :nanny_id)
+    end
+
+    def booking_params_update
+        params.require(:booking).permit(:end_date)
     end
 
 end
