@@ -16,7 +16,9 @@
   <body>
     <%= render 'shared/navbar' unless params[:controller] == 'pages' && params[:action] == 'landing' %>
     <%= render 'shared/flashes' %>
+    <% if user_signed_in? %>
     <%= current_user.id %>
+    <% end %>
         <%= yield %>
   </body>
 </html>
