@@ -7,6 +7,10 @@ class BookingPolicy < ApplicationPolicy
 
   end
 
+  def index?
+    record.user == user
+  end
+
   def new?
     true
   end
