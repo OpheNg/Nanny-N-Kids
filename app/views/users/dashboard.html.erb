@@ -64,8 +64,9 @@
           <h2>Bookings</h2>
           <p>Access to your bookings history,</p>
           <p>take a look at your past and incoming reservations</p>
+          <br><br>
+          <%= link_to "Past & incoming reservations.", user_bookings_path(@user.id) %>
           <br>
-          <a href="#">View</a>
         </div>
     </div>
 
