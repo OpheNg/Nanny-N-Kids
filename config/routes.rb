@@ -4,11 +4,8 @@ Rails.application.routes.draw do
 
   get 'profile', to: 'users#profile'
   get 'dashboard', to: 'users#dashboard'
- 
 
-
-  # resources :user
-  resources :nanny
+  resources :nannies
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   # resources :booking
