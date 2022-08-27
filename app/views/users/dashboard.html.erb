@@ -1,0 +1,86 @@
+<div class="top">
+  <h1><i class="fa-regular fa-calendar-days"> </i> My Dashboard </h1>
+  <h1 class="blue"> Nanny & Kids </h1>
+</div>
+
+
+<%# Box with ALL divs = dash %>
+<div class="dash">
+  <%# Box with (Profile div + calendar div) = side %>
+  <div class="side">
+
+    <div class="profile">
+      <h3>User profile</h3>
+      <img class="avatar"src="https://via.placeholder.com/150" alt="user pic">
+      <p>Sunday, 21st August 2022</p>
+      <ul class="notif">
+        <li><i class="fa-solid fa-bell"></i><a href="#">Notifications</a></li>
+        <li><i class="fa-solid fa-gear"></i><a href="#">Settings</a></li>
+        <li><i class="fa-solid fa-right-from-bracket"></i><%= link_to "Log out", root_path %></li>
+      </ul>
+    </div>
+
+    <div class="callendar">
+      <%# <p>Add a callendar plug in HERE</p> %>
+      <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661528801/Nanny%20N%20Kids/Sans_titre_18_e1dgmd.png",
+          width: 200, crop: :fill)%>
+
+    </div>
+  </div>
+
+
+  <%# Box with dashboard actions = container %>
+   <div class="container">
+    <div class="cards_family">
+       <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661528068/Nanny%20N%20Kids/Sans_titre_13_qqmbyk.png",
+          width: 190, crop: :fill)%>
+        <div class="card-action">
+          <h2>You are a Family</h2>
+          <p>You need a Nanny ?</p>
+          <p>Check out all the Nannies profiles !</p>
+          <p>Start your search</p>
+          <br>
+          <a href="#"class="find-nanny">Find a Nanny</a>
+        </div>
+    </div>
+
+    <div class="cards_nanny">
+      <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661528260/Nanny%20N%20Kids/Sans_titre_11_pn5dve.png",
+            width: 140, crop: :fill)%>
+        <div class="card-action">
+          <h2>You are a Nanny</h2>
+          <p>You wanna propose your services ? </p>
+          <p> Look around and find a family</p>
+          <br>
+          <a href="#"class="find_family"> Babysit</a>
+        </div>
+    </div>
+
+    <div class="cards_bookings">
+      <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661528368/Nanny%20N%20Kids/Sans_titre_15_fwvbeh.png",
+            width: 140, crop: :fill)%>
+        <div class="card-action">
+          <h2>Bookings</h2>
+          <p>Access to your bookings history,</p>
+          <p>take a look at your past and incoming reservations</p>
+          <br>
+          <a href="#">View</a>
+        </div>
+    </div>
+
+    <div class="cards_mess">
+      <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661528441/Nanny%20N%20Kids/Sans_titre_14_ytj7p2.png",
+            width: 240, crop: :fill)%>
+        <div class="card-action">
+          <h2>Messages</h2>
+          <p>Check out your conversation feed</p>
+          <br>
+          <a href="#">Go</a>
+        </div>
+    </div>
+  </div>
+
+
+
+
+</div>

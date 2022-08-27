@@ -60,14 +60,17 @@
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 4px;
-  color: #7897ab;
+  color: #63696d;
   text-shadow: 2px;
   border: solid grey 1px;
   background-color: rgba(205, 240, 234, 0.4);
   opacity: 0.5;
-  margin: 0 24px;
+  // margin: 0 24px;
   font-size: 20px;
   justify-content: space-around;
+  text-align: center;
+  font-weight: bold;
+  // width: 150px;
 }
 
 .landing-img h3 .btn-succes a:hover {

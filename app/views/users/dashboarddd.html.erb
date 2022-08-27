@@ -2,6 +2,12 @@
   <h1><i class="fa-regular fa-calendar-days"> </i> My Dashboard </h1>
   <h1 class="blue"> Nanny & Kids </h1>
 </div>
+<%# #ca marche passsssss# %>
+<div class="welcome">
+  <% if user_signed_in? %>
+    <h3>Logged as:<% current_user.email %></h3>
+  <% end %>
+</div>
 
 <div class="dash">
    <div class="side">
