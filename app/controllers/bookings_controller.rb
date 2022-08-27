@@ -1,20 +1,20 @@
 class BookingsController < ApplicationController
 
     def index
-        @user = User.find(params[:user_id])
+        @user = current_user
         @bookings = Booking.all
         @bookings = policy_scope(Booking).order(created_at: :desc)
         
     end
 
     def show
-        @user = User.find(params[:user_id])
+        @user = current_user
         @booking = Booking.find(params[:id])
         authorize @booking
     end
 
     def new
-        @user = User.find(params[:user_id])
+        @user = current_user
         @booking = Booking.new
         authorize @booking
     end
@@ -22,42 +22,42 @@ class BookingsController < ApplicationController
     def create 
         @booking = Booking.new(booking_params)
 
-        # @user = User.find(params[:user_id])
+        @user = current_user
         @booking.user = current_user
         authorize @booking
 
         if @booking.save
-            redirect_to user_booking_path(@booking.user.id, @booking.id)
+            redirect_to bookings_path
         else
         end
     end
 
 
     def edit
-        @user = User.find(params[:user_id])
-        @booking = Booking.find(params[:id])
+        @user = current_user
+        @booking = Booking.find(params[:format])
         authorize @booking
     end
 
     def update
         @booking = Booking.find(params[:id])
 
-        @user = User.find(params[:user_id])
+        @user = current_user
         @booking.user = @user
         authorize @booking
 
         if @booking.update(booking_params_update)
-            redirect_to user_booking_path(@booking.user.id, @booking.id)
+            redirect_to booking_path
         else
         end
     end
 
     def destroy 
-        @booking = Booking.find(params[:id])
+        @booking = Booking.find(params[:format])
         authorize @booking
         
         if @booking.destroy
-            redirect_to user_bookings_path(@booking.user.id)
+            redirect_to bookings_path
         else
         end
     end 

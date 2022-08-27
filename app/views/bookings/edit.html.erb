@@ -10,9 +10,11 @@
 
 <h3>Please update the info by filling this form</h3>
 
-<%= simple_form_for [@user, @booking] do |f| %>
+<%# remmplacer @user par @nanny, faut changer toutes les routes pour le create et le new %>
+
+<%= simple_form_for [@nanny, @booking] do |f| %>
   <%= f.input :end_date %>
   <%= f.button :submit %>
 <% end %>
 
-<%= link_to "Back to index", user_bookings_path(@booking.user.id) %>
+<%= link_to "Back to index", bookings_path %>
