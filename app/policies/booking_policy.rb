@@ -1,14 +1,14 @@
 class BookingPolicy < ApplicationPolicy
-  # class Scope < Scope
+  class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
-    # def resolve
-    #   scope.all
-    # end
+    def resolve
+      scope.where(user: user)
+    end
 
-  # end
+  end
 
   def new?
-    return true
+    true
   end
 
   def create?

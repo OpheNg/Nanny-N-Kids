@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def dashboarddd
     @user = User.find(params[:id])
-    # authorize @booking
+    authorize @user
   end
   
 end
