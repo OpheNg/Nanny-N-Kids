@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   end
 
   def dashboard
+    @user = User.find(params[:id])
+    authorize @user
   end
 
   def search_a_nanny
