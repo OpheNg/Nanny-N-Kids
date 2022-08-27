@@ -10,4 +10,8 @@ class UsersController < ApplicationController
 
   def nanny_index
   end
+
+  def dashboarddd
+    @user = User.find(params[:id])
+  end
 end

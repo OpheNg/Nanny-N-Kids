@@ -3,15 +3,19 @@ Rails.application.routes.draw do
   root to: 'pages#landing'
 
   get 'profile', to: 'users#profile'
-  get '/users/:id', to: 'users#dashboard', as: 'user'
 
   get'search_a_nanny', to: 'users#search_a_nanny'
   get 'nanny_index', to: 'nanny#index'
 
+  get 'dashboard', to: 'users#dashboard'
 
+  #création d'une nouvelle route pour avoir un url de type /users/1 qui redirige vers la page dashboard
+  get '/users/:id', to: 'users#dashboarddd', as: 'user'
 
   # resources :user
   resources :nanny
+  resources :nannies
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   # resources :booking
@@ -19,9 +23,10 @@ Rails.application.routes.draw do
 
   # root "bookings#index"
 
-  resources :bookings do
+  resources :users do
     resources :nannies
-    resources :users
+    resources :bookings
   end
+
 
 end

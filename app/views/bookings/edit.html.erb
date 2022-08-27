@@ -1,0 +1,18 @@
+<h1> Edit your Booking </h1>
+
+<h2> Booking selected : </h2>
+<ul>
+    <li>Booking id n°<%= @booking.id %></li>
+    <li>Start date : <%= @booking.start_date %></li>
+    <li>End date : <%= @booking.end_date %></li>
+    <li>Nanny id booked n°<%= @booking.nanny.id %></li>
+</ul>
+
+<h3>Please update the info by filling this form</h3>
+
+<%= simple_form_for [@user, @booking] do |f| %>
+  <%= f.input :end_date %>
+  <%= f.button :submit %>
+<% end %>
+
+<%= link_to "Back to index", user_bookings_path(@booking.user.id) %>

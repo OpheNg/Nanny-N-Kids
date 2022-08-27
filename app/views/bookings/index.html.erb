@@ -1,13 +1,29 @@
 <h1>Index Bookings - PAST & INCOMING BOOKINGS</h1>
-
-<%= 'Blablabla' %>
-
+<br>
+<%# <%= link_to "New Booking - NE FONCTIONNE PAS", new_user_booking_path %>
+<%= link_to 'NEW BOOKING', new_user_booking_path(@user.id) %>
+<br>
 <ul>
+
   <% @bookings.each do |booking| %>
-    <li><%= link_to "The booking", booking %>, <strong>id : <%= booking.id %></strong></li>
+  <div>
+  <br>
+    <%# <li><%= link_to "The booking", booking %>, <strong><%= link_to "id :", user_booking_path(booking.user.id, booking.id) %><%= booking.id %></strong></li>
+    <li>user id : <%= booking.user.id %></li>
+    <li>nanny id : <%= booking.nanny.id %></li>
     <li>start date : <%=  booking.start_date %></li>
     <li>end date : <%= booking.end_date %></li>
+    <li>status : <%= booking.status %></li>
     <li>Price !👉<%= booking.total_price %></li>
+    <%= link_to "Edit the booking", edit_user_booking_path(booking.user.id, booking.id) %>
+    <li><%= link_to "Delete", user_booking_path(booking.user.id, booking.id), method: :delete, data: { confirm: "Are you sure?" } %>
+    </li>
+  </div>
     <% end %>
+
 </ul>
+
+<%# user_bookings_path(@user.id) %>
+
+<%= link_to "Back", :back %>
 
