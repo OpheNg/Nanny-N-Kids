@@ -121,9 +121,9 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   config.action_mailer.default_url_options = { host: 'nannynkids.herokuapp.com' }
 
-  cloud_name: "dpn2f5kbj"
-  api_key: "224572626746382"
-  api_secret: "vqjWExqYyL-zdZl4sCYzTSJZmoY"
-  secure:true
+  # cloud_name: "dpn2f5kbj"
+  # api_key: "224572626746382"
+  # api_secret: "vqjWExqYyL-zdZl4sCYzTSJZmoY"
+  # secure:true
 
 end
