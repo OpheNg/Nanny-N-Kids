@@ -74,4 +74,10 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  cloud_name: "dpn2f5kbj"
+  api_key: "224572626746382"
+  api_secret: "vqjWExqYyL-zdZl4sCYzTSJZmoY"
+  secure: true
+
 end
