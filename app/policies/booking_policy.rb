@@ -19,4 +19,13 @@ class BookingPolicy < ApplicationPolicy
     record.user == user
   end
 
+  def edit?
+    record.user == user
+  end 
+
+  def update?
+    true
+  end 
+  
+
 end

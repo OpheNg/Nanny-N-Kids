@@ -10,14 +10,12 @@ class BookingsController < ApplicationController
         authorize @booking
     end
 
-    #Ne fonctionne pas
     def new
         @user = User.find(params[:user_id])
         @booking = Booking.new
         authorize @booking
     end
 
-    #Ne fonctionne pas
     def create 
         @booking = Booking.new(booking_params)
 
@@ -35,6 +33,7 @@ class BookingsController < ApplicationController
     def edit
         @user = User.find(params[:user_id])
         @booking = Booking.find(params[:id])
+        authorize @booking
     end
 
     def update
@@ -42,6 +41,7 @@ class BookingsController < ApplicationController
 
         @user = User.find(params[:user_id])
         @booking.user = @user
+        authorize @booking
 
         if @booking.update(booking_params_update)
             redirect_to user_booking_path(@booking.user.id, @booking.id)
