@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'profile', to: 'users#profile'
 
   get'search_a_nanny', to: 'users#search_a_nanny'
-  get 'nanny_index', to: 'nanny#index'
+  get 'nanny_index', to: 'users#nanny_index'
 
   get 'dashboard', to: 'users#dashboard'
 
