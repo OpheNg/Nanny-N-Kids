@@ -144,9 +144,9 @@ body {
   margin-top: 8px;
 }
 
-.cards .card-action {
-  padding: 16px;
-}
+// .cards .card-action {
+//   padding: 16px;
+// }
 
 .card-action h2 {
   color:#0A98DD;
@@ -316,4 +316,26 @@ body {
 }
 .container .cards_family img {
   padding-top: 24px;
+}
+
+
+.card-action {
+  padding: 16px;
+  margin: 24px;
+}
+.card-action a {
+  border: solid 1px white;
+  border-radius: 4px;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #7897ab;
+  font-weight: bold;
+  box-shadow: 1px 1px 1px 1px gray;
+
+}
+
+.card-action a:hover{
+  color:#ff8d76;
+  border: solid 1px #7897ab ;
+
 }
