@@ -4,9 +4,9 @@
 </div>
 <%# #ca marche passsssss# %>
 <div class="welcome">
-  <% if user_signed_in? %>
-    <h3>Logged as:<% current_user.email %></h3>
-  <% end %>
+  <%# <% if user_signed_in? %>
+    <h3>Logged as user N°: <%= @user.id %></h3>
+  <%# <% end %>
 </div>
 
 <div class="dash">
@@ -44,8 +44,9 @@
       <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661089186/Nanny%20N%20Kids/jeshoots-com-9n1USijYJZ4-unsplash_bb0se0.jpg",
             width: 100, height: 100, crop: :fill)%>
         <div class="card-action">
-          <h2>Bookings</h2>
+          <h2>Bookings TGM</h2>
           <p>Take a look at your <strong>past & incoming</strong> reservations.</p>
+          <%= link_to "your bookings", user_bookings_path(@user.id) %>
         </div>
     </div>
 
