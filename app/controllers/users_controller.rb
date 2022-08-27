@@ -13,5 +13,6 @@ class UsersController < ApplicationController
 
   def dashboarddd
     @user = User.find(params[:id])
+    authorize @user
   end
 end

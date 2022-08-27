@@ -3,24 +3,28 @@ class BookingsController < ApplicationController
     def index
         @user = User.find(params[:user_id])
         @bookings = Booking.all
+        @bookings = policy_scope(Booking).order(created_at: :desc)
+        
     end
 
     def show
+        @user = User.find(params[:user_id])
         @booking = Booking.find(params[:id])
+        authorize @booking
     end
 
-    #Ne fonctionne pas
     def new
         @user = User.find(params[:user_id])
         @booking = Booking.new
+        authorize @booking
     end
 
-    #Ne fonctionne pas
     def create 
         @booking = Booking.new(booking_params)
 
-        @user = User.find(params[:user_id])
-        @booking.user = @user
+        # @user = User.find(params[:user_id])
+        @booking.user = current_user
+        authorize @booking
 
         if @booking.save
             redirect_to user_booking_path(@booking.user.id, @booking.id)
@@ -32,6 +36,7 @@ class BookingsController < ApplicationController
     def edit
         @user = User.find(params[:user_id])
         @booking = Booking.find(params[:id])
+        authorize @booking
     end
 
     def update
@@ -39,6 +44,7 @@ class BookingsController < ApplicationController
 
         @user = User.find(params[:user_id])
         @booking.user = @user
+        authorize @booking
 
         if @booking.update(booking_params_update)
             redirect_to user_booking_path(@booking.user.id, @booking.id)
@@ -48,7 +54,7 @@ class BookingsController < ApplicationController
 
     def destroy 
         @booking = Booking.find(params[:id])
-        
+        authorize @booking
         
         if @booking.destroy
             redirect_to user_bookings_path(@booking.user.id)

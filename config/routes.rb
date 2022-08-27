@@ -12,8 +12,7 @@ Rails.application.routes.draw do
   #création d'une nouvelle route pour avoir un url de type /users/1 qui redirige vers la page dashboard
   get '/users/:id', to: 'users#dashboarddd', as: 'user'
 
-  # resources :user
-  resources :nanny
+
   resources :nannies
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
