@@ -3,8 +3,11 @@ Rails.application.routes.draw do
   root to: 'pages#landing'
 
   get 'profile', to: 'users#profile'
-  get 'dashboard', to: 'users#dashboard'
- 
+  get '/users/:id', to: 'users#dashboard', as: 'user'
+
+  get'search_a_nanny', to: 'users#search_a_nanny'
+  get 'nanny_index', to: 'nanny#index'
+
 
 
   # resources :user

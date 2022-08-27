@@ -4,5 +4,10 @@ class UsersController < ApplicationController
 
   def dashboard
   end
-  
+
+  def search_a_nanny
+  end
+
+  def nanny_index
+  end
 end
