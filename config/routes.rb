@@ -3,10 +3,15 @@ Rails.application.routes.draw do
   root to: 'pages#landing'
 
   get 'profile', to: 'users#profile'
+
+  get'search_a_nanny', to: 'users#search_a_nanny'
+  get 'nanny_index', to: 'users#nanny_index'
+
   get 'dashboard', to: 'users#dashboard'
 
   #création d'une nouvelle route pour avoir un url de type /users/1 qui redirige vers la page dashboard
   get '/users/:id', to: 'users#dashboarddd', as: 'user'
+
 
   resources :nannies
 

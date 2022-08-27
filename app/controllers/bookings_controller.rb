@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
         @user = User.find(params[:user_id])
         @bookings = Booking.all
         @bookings = policy_scope(Booking).order(created_at: :desc)
+        
     end
 
     def show
