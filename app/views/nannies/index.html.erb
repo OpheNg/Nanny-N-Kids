@@ -10,8 +10,10 @@
     <li>Nanny last name : <%= nanny.last_name %></li>
     <li>Price per day : <%= nanny.price_per_day %>
     <% if nanny.user == current_user %>
-    <%= link_to "Edit this Nanny", edit_nanny_path(nanny.user.id, nanny.id) %>
-    <li><%= link_to "Delete", nanny_path(nanny.user.id, nanny.id), method: :delete, data: { confirm: "Are you sure?" } %>
+    <li><%= link_to "Edit this Nanny", edit_nanny_path(nanny.user.id, nanny.id) %></li>
+    <li><%= link_to "❌ Delete", nanny_path(nanny.user.id, nanny.id), method: :delete, data: { confirm: "Are you sure?" } %></li>
+    <% else %>
+    <li><%= link_to "👉 Book this Nanny", new_nanny_booking_path(nanny) %></li>
     <% end %>
     </li>
   </div>

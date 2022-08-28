@@ -21,7 +21,7 @@ class NanniesController < ApplicationController
         authorize @nanny
 
         if @nanny.save
-            redirect_to nannies_path
+            redirect_to bookings_path
         else
         end 
     end 
@@ -44,6 +44,16 @@ class NanniesController < ApplicationController
         else
         end
     end
+
+    def destroy 
+        @nanny = Nanny.find(params[:format])
+        authorize @nanny
+        
+        if @nanny.destroy
+            redirect_to nannies_path
+        else
+        end
+    end 
 
     private 
 

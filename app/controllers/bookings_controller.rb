@@ -14,6 +14,8 @@ class BookingsController < ApplicationController
     end
 
     def new
+
+        @nanny = Nanny.find(params[:nanny_id])
         @user = current_user
         @booking = Booking.new
         authorize @booking
