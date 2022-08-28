@@ -23,10 +23,10 @@ Rails.application.routes.draw do
 
   # root "bookings#index"
 
-  resources :users do
-    resources :nannies
+  # resources :users do
+  #   resources :nannies
     resources :bookings
-  end
+  # end
 
 
 end

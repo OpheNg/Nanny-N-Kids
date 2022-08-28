@@ -41,7 +41,7 @@
           <p>Start your search</p>
           <br>
           <%# <a href="#"class="find-nanny">Find a Nanny</a> %>
-          <%= link_to 'Find a Nanny', 'search_a_nanny' %>
+          <%= link_to 'Find a Nanny', nannies_path %>
         </div>
     </div>
 
@@ -53,7 +53,7 @@
           <p>You wanna propose your services ? </p>
           <p> Look around and find a family</p>
           <br>
-          <a href="#"class="find_family"> Babysit</a>
+          <%= link_to "Babysit", new_nanny_path %>
         </div>
     </div>
 
@@ -65,7 +65,11 @@
           <p>Access to your bookings history,</p>
           <p>take a look at your past and incoming reservations</p>
           <br><br>
+<<<<<<< HEAD
           <%= link_to "View", user_bookings_path(@user.id) %>
+=======
+          <%= link_to "Past & incoming reservations.", bookings_path %>
+>>>>>>> 9b606cfb99007fb753107eb3b82bc64a7fa7358d
           <br>
         </div>
     </div>
