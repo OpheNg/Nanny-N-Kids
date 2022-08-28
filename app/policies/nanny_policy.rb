@@ -19,7 +19,11 @@ class NannyPolicy < ApplicationPolicy
   end 
 
   def edit?
-    true
+    record.user == user
   end 
+
+  def update?
+    record.user == user
+  end
 
 end
