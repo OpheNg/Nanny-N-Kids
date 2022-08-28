@@ -1,0 +1,16 @@
+<h1>All the Nannies :</h1>
+<br>
+<ul>
+<br>
+  <% @nannies.each do |nanny| %>
+  <br>
+    <li>created by user id : <%= nanny.user.id %>
+    <li>nanny id : <%= nanny.id %></strong></li>
+    <li>Nanny first name : <%= nanny.first_name %></li>
+    <li>Nanny last name : <%= nanny.last_name %></li>
+    <li>Price per day : <%= nanny.price_per_day %>
+    </li>
+  </div>
+    <% end %>
+
+ 

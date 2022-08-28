@@ -6,6 +6,7 @@
 <ul>
 
   <% @bookings.each do |booking| %>
+  
   <div>
   <br>
     <strong><%= link_to "id :", booking_path(booking) %><%= booking.id %></strong></li>
