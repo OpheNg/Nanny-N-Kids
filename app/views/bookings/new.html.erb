@@ -10,7 +10,7 @@
 <h2>Please fill in the following form to create a new booking :</h2>
 <%= simple_form_for [@nanny, @booking] do |f| %>
 
-  <%= f.input :start_date %>
+  <%= f.input :start_date, error: 'S is mandatory, please specify one' %>
   <%= f.input :end_date %>
   <%= f.input :nanny_id, input_html: {value: params[:nanny_id]} %>
   <%= f.button :submit %>
