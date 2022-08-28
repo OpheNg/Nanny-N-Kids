@@ -26,6 +26,12 @@ class NanniesController < ApplicationController
         end 
     end 
 
+    def edit
+        @user = current_user
+        @nanny = Nanny.find(params[:format])
+        authorize @nanny
+    end
+
     private 
 
     def nanny_params

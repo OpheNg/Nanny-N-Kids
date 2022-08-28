@@ -18,4 +18,8 @@ class NannyPolicy < ApplicationPolicy
     true
   end 
 
+  def edit?
+    true
+  end 
+
 end
