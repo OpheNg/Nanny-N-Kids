@@ -1,6 +1,6 @@
 <div class="top">
   <h1><i class="fa-regular fa-calendar-days"> </i> My Dashboard </h1>
-  <h1 class="blue"> Nanny & Kids </h1>
+  <%# <h1 class="blue"> Nanny & Kids </h1> %>
 </div>
 
 
@@ -11,12 +11,13 @@
 
     <div class="profile">
       <h3>User profile</h3>
-      <img class="avatar"src="https://via.placeholder.com/150" alt="user pic">
+      <%# <img class="avatar"src="avatar Ophe.jpg" alt="user pic"> %>
+      <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661771495/Nanny%20N%20Kids/avatar_Ophe_uar2wv.jpg", :width=>150, :height=>150, :radius=>"50px", :crop=>"fill")%>
       <p>Sunday, 21st August 2022</p>
       <ul class="notif">
         <li><i class="fa-solid fa-bell"></i><a href="#">Notifications</a></li>
         <li><i class="fa-solid fa-gear"></i><a href="#">Settings</a></li>
-        <li><i class="fa-solid fa-right-from-bracket"></i><%= link_to "Log out", root_path %></li>
+        <li><i class="fa-solid fa-right-from-bracket"></i><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       </ul>
     </div>
 
@@ -62,10 +63,11 @@
             width: 140, crop: :fill)%>
         <div class="card-action">
           <h2>Bookings</h2>
-          <p>Access to your bookings history,</p>
-          <p>take a look at your past and incoming reservations</p>
-          <br><br>
-          <%= link_to "Past & incoming reservations.", bookings_path %>
+
+          <p>Take a look at your past <br>and incoming reservations</p>
+          <br>
+
+          <%= link_to "View", bookings_path %>
           <br>
         </div>
     </div>
@@ -83,6 +85,16 @@
   </div>
 
 
+</div>
 
-
+<div class= 'footer'>
+  <p class="follow">Follow Us !</p>
+  <ul>
+    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+  </ul>
+  <p class="info">Nanny N Kids - 18, Marble Street - LONDON </p>
+  <p>Copyright nannynkids.herokuapp.com - All rights reserved.
+  <a href="#">contact@nannynkids.com</a></p>
 </div>

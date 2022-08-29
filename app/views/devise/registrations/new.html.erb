@@ -1,5 +1,38 @@
 
 
+<%# <div class= 'banner'>
+  <h1> <i class="fa-solid fa-children"></i>   Nanny & Kids   <i class="fa-solid fa-children"></i></h1>
+
+</div> %>
+
+<%# <div class='CTA'> %>
+  <%# <h3>Find your Nanny in one click!</h3>
+   <p>An app needed by all families</p> %>
+
+  <%# <a class="btn-succes"href="#">Sign Up</a>
+  <a class="btn-succes" href="#">Sign In</a> %>
+<%# </div> %>
+
+<div class="landing-img">
+  <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661068667/Nanny%20N%20Kids/profiles.jpeg_qmit6f.jpg",
+      width: 700, height: 400, crop: :fill)%>
+
+  <%# <h3>
+    <span style="color: #7897ab">
+      Find your Nanny in one click!
+    </span>
+    <br><br>
+      Check out the nannies profiles, <br> Propose your services <br><br>
+        <span class ="btn-succes">
+          <%# <a href="#">Register</a> %>
+          <%# <%= link_to "Register", new_user_registration_path, class: "nav-link" %>
+        <%# </span>
+        <span class ="btn-succes">
+         <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        <%# </span>
+  </h3> %>
+
+
 <div class="container">
   <div class ="row">
     <div class ="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4">
@@ -8,6 +41,7 @@
           <%= f.error_notification %>
 
           <div class="form-inputs">
+          
             <%= f.input :email,
                         required: true,
                         autofocus: true,
@@ -29,4 +63,23 @@
         <%= render "devise/shared/links" %>
     </div>
   </div>
+</div>
+
+
+
+
+
+
+</div>
+
+<div class= 'footer'>
+  <p class="follow">Follow Us !</p>
+  <ul>
+    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+  </ul>
+  <p class="info">Nanny N Kids - 18, Marble Street - LONDON </p>
+  <p>Copyright nannynkids.herokuapp.com - All rights reserved.
+  <a href="#">contact@nannynkids.com</a></p>
 </div>
