@@ -11,7 +11,8 @@
 
     <div class="profile">
       <h3>User profile</h3>
-      <img class="avatar"src="https://via.placeholder.com/150" alt="user pic">
+      <%# <img class="avatar"src="avatar Ophe.jpg" alt="user pic"> %>
+      <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661771495/Nanny%20N%20Kids/avatar_Ophe_uar2wv.jpg", :width=>150, :height=>150, :radius=>"50px", :crop=>"fill")%>
       <p>Sunday, 21st August 2022</p>
       <ul class="notif">
         <li><i class="fa-solid fa-bell"></i><a href="#">Notifications</a></li>
