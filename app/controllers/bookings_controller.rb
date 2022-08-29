@@ -82,16 +82,5 @@ class BookingsController < ApplicationController
         params.require(:booking).permit(:end_date)
     end
 
-    def diff_date
-        @booking = Booking.find(params[:id])
-        @booking.end_date - @booking.start_date
-    end
-
-    def total_price
-        @nanny = Nanny.find(params[:nanny_id])
-        daily_price = @nanny.price_per_day
-        diff_date * daily_price
-    end 
-
 
 end

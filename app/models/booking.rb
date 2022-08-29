@@ -1,6 +1,5 @@
 class Booking < ApplicationRecord
   belongs_to :user
-  belongs_to :nanny
-
+  belongs_to :nanny  
   
 end
