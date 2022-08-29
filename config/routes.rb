@@ -28,5 +28,9 @@ Rails.application.routes.draw do
     resources :bookings
   # end
 
+  resources :nannies do
+    resources :bookings, only: [ :new, :create, :show ]
+  end
+
 
 end
