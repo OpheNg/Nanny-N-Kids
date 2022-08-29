@@ -1,7 +1,28 @@
+
+
+<div class= 'banner'>
+  <h1> <i class="fa-solid fa-children"></i>   Nanny & Kids   <i class="fa-solid fa-children"></i></h1>
+
+</div>
+
+<%# <div class='CTA'> %>
+  <%# <h3>Find your Nanny in one click!</h3>
+   <p>An app needed by all families</p> %>
+
+  <%# <a class="btn-succes"href="#">Sign Up</a>
+  <a class="btn-succes" href="#">Sign In</a> %>
+<%# </div> %>
+
+<div class="landing-img">
+  <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661068667/Nanny%20N%20Kids/profiles.jpeg_qmit6f.jpg",
+      width: 700, height: 400, crop: :fill)%>
+
 <div class="container">
   <div class ="row">
     <div class ="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4">
 
+    <%# Pour le form, il faut que je supprime le display grid , mais je ne trouve pas le fichier scss correspondant %>
+    <%# il faut aussi supp la nav bar dans le fichier application, pour les pages sign in et sign up, voir path %>
       <h2>Log in</h2>
 
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -26,4 +47,32 @@
 
     </div>
   </div>
+</div>
+
+  <%# <h3>
+    <span style="color: #7897ab">
+      Find your Nanny in one click!
+    </span>
+    <br><br>
+      Check out the nannies profiles, <br> Propose your services <br><br>
+        <span class ="btn-succes">
+          <%# <a href="#">Register</a> %>
+          <%# <%= link_to "Register", new_user_registration_path, class: "nav-link" %>
+        <%# </span>
+        <span class ="btn-succes">
+         <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        <%# </span>
+  </h3> %>
+</div>
+
+<div class= 'footer'>
+  <p class="follow">Follow Us !</p>
+  <ul>
+    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+  </ul>
+  <p class="info">Nanny N Kids - 18, Marble Street - LONDON </p>
+  <p>Copyright nannynkids.herokuapp.com - All rights reserved.
+  <a href="#">contact@nannynkids.com</a></p>
 </div>

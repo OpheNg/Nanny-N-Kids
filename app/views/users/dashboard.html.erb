@@ -1,6 +1,6 @@
 <div class="top">
   <h1><i class="fa-regular fa-calendar-days"> </i> My Dashboard </h1>
-  <h1 class="blue"> Nanny & Kids </h1>
+  <%# <h1 class="blue"> Nanny & Kids </h1> %>
 </div>
 
 
@@ -16,7 +16,7 @@
       <ul class="notif">
         <li><i class="fa-solid fa-bell"></i><a href="#">Notifications</a></li>
         <li><i class="fa-solid fa-gear"></i><a href="#">Settings</a></li>
-        <li><i class="fa-solid fa-right-from-bracket"></i><%= link_to "Log out", root_path %></li>
+        <li><i class="fa-solid fa-right-from-bracket"></i><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       </ul>
     </div>
 
@@ -65,7 +65,7 @@
           <p>Access to your bookings history,</p>
           <p>take a look at your past and incoming reservations</p>
           <br><br>
-          <%= link_to "Past & incoming reservations.", bookings_path %>
+          <%= link_to "View", bookings_path %>
           <br>
         </div>
     </div>

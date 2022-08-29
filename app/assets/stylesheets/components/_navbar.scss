@@ -8,7 +8,8 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 80px;
+  border-radius: 10px;
 }
 
 .container-fluid {
@@ -18,4 +19,26 @@
 
 .navbar navbar-expand-sm navbar-light navbar-lewagon {
   padding-bottom: 0px;
+}
+
+#navbarDropdown {
+  width: 100px;
+}
+
+.container-fluid {
+  height: 100px;
+}
+.container-fluid .nav-link {
+  padding-top: 60px;
+  font-size: 20px;
+
+}
+.container-fluid .nav-link:hover {
+  color: #0A98DD;
+  font-weight: bold;
+}
+.container-fluid p{
+  font-size: 40px;
+  color: #0A98DD;
+
 }
