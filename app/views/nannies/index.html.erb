@@ -23,6 +23,8 @@
                 <%= link_to "Edit this Nanny", edit_nanny_path(nanny.user.id, nanny.id) %>
                 <br>
                 <%= link_to "Delete", nanny_path(nanny.user.id, nanny.id), method: :delete, data: { confirm: "Are you sure?" } %>
+                <% else %>
+                <%= link_to "👉 Book this Nanny", new_nanny_booking_path(nanny) %></li>
                 <% end %>
 
             </ul>

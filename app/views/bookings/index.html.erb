@@ -20,8 +20,6 @@
     <% if booking.user == current_user %>
     <%= link_to "Edit the booking", edit_booking_path(booking.user.id, booking.id) %>
     <li><%= link_to "Delete", booking_path(booking.user.id, booking.id), method: :delete, data: { confirm: "Are you sure?" } %>
-    <% else %>
-    <li><%= link_to "👉 Book this Nanny", new_nanny_booking_path(nanny) %></li>
     <% end %>
     </li>
   </div>
