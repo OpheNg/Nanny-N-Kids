@@ -16,11 +16,7 @@
   <body>
     <%= render 'shared/navbar' unless params[:action] == 'users/sign_in' %>
     <%= render 'shared/flashes' %>
-    <h5>You are logged as :
-      <% if user_signed_in? %>
-      <%= current_user.email %>
-      <% end %>
-    </h3>
+    
         <%= yield %>
   </body>
 </html>

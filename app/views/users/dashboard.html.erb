@@ -13,10 +13,29 @@
       <h3>User profile</h3>
       <%# <img class="avatar"src="avatar Ophe.jpg" alt="user pic"> %>
       <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661771495/Nanny%20N%20Kids/avatar_Ophe_uar2wv.jpg", :width=>150, :height=>150, :radius=>"50px", :crop=>"fill")%>
-      <p>Sunday, 21st August 2022</p>
+
+      <br>
+      <br>
+
+
+      <p class="date">Sunday, 21st August 2022</p>
+       <%# <div id="current_date"></p>
+          <script>
+          document.getElementById("current_date").innerHTML = Date();
+          </script> %>
+      <br>
       <ul class="notif">
-        <li><i class="fa-solid fa-bell"></i><a href="#">Notifications</a></li>
-        <li><i class="fa-solid fa-gear"></i><a href="#">Settings</a></li>
+        <li class="mail">Logged as :
+            <span class="blue-mail"><u><% if user_signed_in? %>
+            <%= current_user.email %>
+            <% end %></u></span>
+        </li>
+        <br>
+        <br>
+        <br>
+
+        <li><i class="fa-solid fa-gear"></i><a href="#">Edit profile</a></li>
+        <br>
         <li><i class="fa-solid fa-right-from-bracket"></i><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       </ul>
     </div>

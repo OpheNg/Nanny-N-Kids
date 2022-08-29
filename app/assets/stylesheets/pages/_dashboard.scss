@@ -49,15 +49,25 @@ body {
 }
 .side .profile{
   border-radius: 5px;
-  box-shadow: 1px 2px 2px 1px  #7897ab;
+  box-shadow: 1px 2px 2px 1px #fdeedc;
   height: 500px;
   padding-top: 20px;
-  background-color: #fdeedc;
+  background-color: #fdeedc7a;
+  box-shadow: 1px 2px 2px 1px  #bcd0dd;
+}
+.side .profile .mail{
+  color:#7897ab;
+}
+.side .profile .mail .blue-mail {
+  color:#0A98DD ;
+}
+.side .profile .date {
+  color:#ff8d76;
 }
 
 .side .callendar{
   border-radius: 5px;
-  box-shadow: 1px 2px 2px 1px  #7897ab;
+  box-shadow: 1px 2px 2px 1px  #bcd0dd;
   color: #7897ab;
   height: 240px;
   padding-top: 20px;

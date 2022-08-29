@@ -2,22 +2,34 @@
 <br>
 <div class= "result">
 
-    <div class="nanny-card">
+
       <% @nannies.each do |nanny| %>
-        <ul>
-          <li>created by user id : <%= nanny.user.email %>
-          <li>nanny id : <%= nanny.id %></strong></li>
-          <li>Nanny first name : <%= nanny.first_name %></li>
-          <li>Nanny last name : <%= nanny.last_name %></li>
-          <li>Nanny email : <%= nanny.email %></li>
-          <li>Price per day : <%= nanny.price_per_day %></li>
-            <% if nanny.user == current_user %>
-            <%= link_to "Edit this Nanny", edit_nanny_path(nanny.user.id, nanny.id) %>
-            <%= link_to "Delete", nanny_path(nanny.user.id, nanny.id), method: :delete, data: { confirm: "Are you sure?" } %>
-            <% end %>
-        </ul>
+        <div class="nanny-card">
+
+          <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661784842/holder_fuevmf.png", :width=>150, :height=>150, :crop=>"fill")%>
+
+          <div class="info">
+            <ul>
+
+              <li>Nanny first name : <%= nanny.first_name %></li>
+              <li>Nanny last name : <%= nanny.last_name %></li>
+              <li>Nanny email : <%= nanny.email %></li>
+              <li>Price per day : <%= nanny.price_per_day %></li>
+              <li>nanny id : <%= nanny.id %></strong></li>
+              <br>
+              <li>created by user id : <%= nanny.user.email %>
+              <br>
+                <% if nanny.user == current_user %>
+                <%= link_to "Edit this Nanny", edit_nanny_path(nanny.user.id, nanny.id) %>
+                <br>
+                <%= link_to "Delete", nanny_path(nanny.user.id, nanny.id), method: :delete, data: { confirm: "Are you sure?" } %>
+                <% end %>
+
+            </ul>
+          </div>
+          
+        </div>
       <% end %>
-    </div>
 
 </div>
 
