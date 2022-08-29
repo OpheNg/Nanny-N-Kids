@@ -1,7 +1,7 @@
 <h1>Index Bookings - PAST & INCOMING BOOKINGS</h1>
 <br>
 
-<%= link_to 'NEW BOOKING', new_booking_path %>
+<%# <%= link_to 'NEW BOOKING', new_booking_path %>
 <br>
 <ul>
 
@@ -9,13 +9,14 @@
   
   <div>
   <br>
-    <strong><%= link_to "id :", booking_path(booking) %><%= booking.id %></strong></li>
+    <strong><%= link_to "id :", booking_path(booking.id) %><%= booking.id %></strong></li>
     <li>user id : <%= booking.user.id %></li>
     <li>nanny id : <%= booking.nanny.id %></li>
+    <li>price par day : <%= booking.nanny.price_per_day %>
     <li>start date : <%=  booking.start_date %></li>
     <li>end date : <%= booking.end_date %></li>
     <li>status : <%= booking.status %></li>
-    <li>Price !👉<%= booking.total_price %></li>
+    <li>Price !👉<%= (booking.end_date.mjd - booking.start_date.mjd + 1) * booking.nanny.price_per_day %></li>
     <% if booking.user == current_user %>
     <%= link_to "Edit the booking", edit_booking_path(booking.user.id, booking.id) %>
     <li><%= link_to "Delete", booking_path(booking.user.id, booking.id), method: :delete, data: { confirm: "Are you sure?" } %>
@@ -25,9 +26,9 @@
     <% end %>
 
 </ul>
-<% if policy(Booking).create? %>
-<%= link_to link_to 'NEW BOOKING', new_booking_path(@user.id)  %>
-<% end %>
+<%# <% if policy(Booking).create? %>
+<%# <%= link_to link_to 'NEW BOOKING', new_booking_path(@user.id)  %>
+<%# <% end %> 
 <%# user_bookings_path(@user.id) %>
 
 <%= link_to "Back", :back %>

@@ -2,6 +2,15 @@
     <h1>Booking Id <strong>n°<%= @booking.id %></strong></h1>
 </div>
 
+<h2>Your nanny</h2>
+<ul>
+<li>Nanny id : <%= @booking.nanny.id %></li>
+<li>Nanny First Name : <%= @booking.nanny.first_name %></li>
+<li>Nanny Last Name : <%= @booking.nanny.last_name %></li>
+<li>Nanny description : <%= @booking.nanny.description %></li>
+<li>Nanny Price per day : <%= @booking.nanny.price_per_day %></li>
+</ul>
+
 <div>
     <h2>Dates 🗓️</h2>
         <style type="text/css">
@@ -40,7 +49,7 @@
 
 <div>
     <h2>Total Price 💸</h2>
-    <p><%= @booking.total_price %> €</p>
+    <p><%= (@booking.end_date.mjd - @booking.start_date.mjd + 1) * @booking.nanny.price_per_day %> €</p>
 </div>
 
 <%= link_to "Back to Index", bookings_path %>
