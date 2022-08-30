@@ -14,9 +14,16 @@
   list-style: none;
 
 }
-// .nanny-card .info {
-
-// }
+.nanny-card .info .firstname{
+font-weight: bold;
+font-size: 20px;
+color: #7897ab;
+}
+.nanny-card .info .lastname{
+  font-weight: bold;
+  font-size: 20px;
+  color: #7897ab;
+  }
 
 .nanny-card .info a {
   // border: gray solid 1px;
