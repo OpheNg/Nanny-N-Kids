@@ -1,5 +1,38 @@
 .form {
   height: 600px;
-  max-width: 500px;
-  margin: 0px auto;
+  max-width: 400px;
+  margin-left: 300px;
+}
+.headline {
+  margin-left: 300px;
+}
+h5 {
+  color: #ff8d76;
+  margin-left: 24px;
+}
+h2{
+  color:#0A98DD  ;
+}
+input.btn{
+  border: rgb(135, 160, 186) solid 1px;
+  border-radius: 4px;
+  padding: 6px 10px;
+  color: #0A98DD;
+}
+input.btn:hover{
+  color:#0A98DD ;
+  border: rgb(82, 99, 150) solid 1px;
+  font-weight: 700;
+}
+.background{
+  background-image: url("https://res.cloudinary.com/dhxefoe7j/image/upload/ar_16:9,c_fill,e_sharpen,g_auto,o_51,w_1000/v1661865015/pexels-pixabay-459953_elhufe.jpg");
+  // background-repeat: no-repeat;
+  // margin-left: auto;
+  // margin-right: auto;
+  // object-fit: fill;
+  // opacity: 70;
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+// opacity: 0.3;
 }
