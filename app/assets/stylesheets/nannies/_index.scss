@@ -1,6 +1,16 @@
 // .result {
 
 // }
+
+body {
+  margin-left: 20px;
+}
+
+.title {
+  font-size: 30px;
+  margin: 20px;
+}
+
 .nanny-card {
   background-color:#fcfdff;
   padding: 16px;
@@ -55,7 +65,6 @@ color: #7897ab;
 .result {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
 }
 .buttons {
   padding: 16px;

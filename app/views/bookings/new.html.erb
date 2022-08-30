@@ -1,20 +1,23 @@
-<h1> Booking</h1>
+ <div class="container">
+    <div class="nanny-choice">
+        <h3>Your super nanny</h3>
+        <p class="price"> PRICE PER DAY : <%= @nanny.price_per_day %></p>
+        <hr>
+        <p>NANNY ID : <%= @nanny.id %></p>
+        <hr>
+        <p>FIRST NAME : <%= @nanny.first_name %></p>
+        <hr>
+        <p>LAST NAME : <%=  @nanny.last_name %></p>
+    </div>
 
-<h2>The Nanny you chose </h2>
-<li>Nanny id : <%= @nanny.id %></li>
-<li>First name : <%= @nanny.first_name %></li>
-<li>Last name : <%=  @nanny.last_name %></li>
-<li>Price per day : <%= @nanny.price_per_day %></li>
+      <div class="booking-info">
+        <h3>Create Booking</h3>
+        <%= simple_form_for [@nanny, @booking] do |f| %>
 
-
-<h2>Please fill in the following form to create a new booking :</h2>
-<%= simple_form_for [@nanny, @booking] do |f| %>
-
-  <%= f.input :start_date, error: 'S is mandatory, please specify one' %>
-  <%= f.input :end_date %>
-  <%= f.input :nanny_id, input_html: {value: params[:nanny_id]} %>
-  <%= f.button :submit %>
-<% end %>
-
-
-<%= link_to "Back", :back %>
+        <%= f.input :start_date, error: 'S is mandatory, please specify one' %>
+        <%= f.input :end_date %>
+        <%= f.input :nanny_id, input_html: {value: params[:nanny_id]} %>
+        <%= f.button :submit %>
+       <% end %>
+    </div>
+  </div>
