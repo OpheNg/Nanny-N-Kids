@@ -1,17 +1,40 @@
-<h2>Your notifications</h2>
+<%# <h2>Your notifications</h2>
 
+ %>
+ <div class="background">
 
+  <div >
+    <br>
+    <br>
 
-<h2>New Nanny</h2>
+    <div class="headline">
+      <h2> Create your Nanny's profile</h2>
+      <br>
+      <h5>Please fill in the following form :</h5>
 
-<h2>Please fill in the following form to propose your service :</h2>
-<%= simple_form_for @nanny do |f| %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :email %>
-  <%= f.input :tel %>
-  <%= f.input :price_per_day %>
-  <%= f.button :submit %>
-<% end %>
+    </div>
 
-<%= link_to "Back", :back %>
+    <br>
+
+    <div class="form">
+
+        <%= simple_form_for @nanny do |f| %>
+          <%= f.input :first_name %>
+          <%= f.input :last_name %>
+          <%= f.input :photo, as: :file %>
+          <%= f.input :email %>
+          <%= f.input :tel %>
+          <%= f.input :price_per_day %>
+          <br>
+          <%= f.button :submit %>
+        <% end %>
+
+    </div>
+
+  </div>
+
+  <div  class="links">
+    <%= link_to "Back", :back %>
+  </div>
+
+</div>
