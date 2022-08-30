@@ -18,6 +18,7 @@ input.btn{
   border-radius: 4px;
   padding: 6px 10px;
   color: #0A98DD;
+
 }
 input.btn:hover{
   color:#0A98DD ;
@@ -35,4 +36,22 @@ input.btn:hover{
   background-size:contain;
   background-position:center;
 // opacity: 0.3;
+}
+.links {
+  height: 40px;
+}
+.links a{
+  text-decoration: none;
+  border: solid rgb(142, 171, 181) 1px;
+  color:rgb(142, 171, 181) ;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+.links a:hover{
+  text-decoration: none;
+  border: solid rgb(93, 107, 111) 1px;
+  color:rgb(30, 106, 220);
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: bold;
 }

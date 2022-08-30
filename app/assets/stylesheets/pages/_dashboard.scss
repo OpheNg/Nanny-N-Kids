@@ -29,6 +29,7 @@ body {
 .dash {
   display: flex;
   margin-right: 60px;
+  justify-content: space-around;
 
 }
 
@@ -41,10 +42,10 @@ body {
   // box-shadow: 2px 2px 2px #7897ab;
   text-align: center;
   color: white;
-  width: 400px;
+  width: 300px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex-grow: 0;
 
 }
 .side .profile{
@@ -98,20 +99,20 @@ body {
   width: 150px;
   padding: 24px 0;
 }
-.container {
+.container-dash {
   margin: 52px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 8px;
 }
 @media(max-width: 992px) {
-  .container {
+  .container-dash {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media(max-width: 768px) {
-  .container {
+  .container-dash {
     grid-template-columns: 1fr;
   }
 }
@@ -182,6 +183,7 @@ body {
   border-radius: 4px;
   // padding: 16px;
   text-align: center;
+  min-width: 400px;
 }
 
 .cards_family h2{

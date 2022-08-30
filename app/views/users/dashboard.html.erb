@@ -10,7 +10,7 @@
   <div class="side">
 
     <div class="profile">
-      <h3>User profile</h3>
+      <h3>My profile</h3>
       <%# <img class="avatar"src="avatar Ophe.jpg" alt="user pic"> %>
       <%= image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661771495/Nanny%20N%20Kids/avatar_Ophe_uar2wv.jpg", :width=>150, :height=>150, :radius=>"50px", :crop=>"fill")%>
 
@@ -18,7 +18,7 @@
       <br>
 
 
-      <p class="date">Sunday, 21st August 2022</p>
+      <%# <%= link_to 'Edit profile', "#" %>
        <%# <div id="current_date"></p>
           <script>
           document.getElementById("current_date").innerHTML = Date();
@@ -34,7 +34,8 @@
         <br>
         <br>
 
-        <li><i class="fa-solid fa-gear"></i><a href="#">Edit profile</a></li>
+        <%# <li><i class="fa-solid fa-gear"></i><a href="#">Edit profile</a></li> %>
+        <li><i class="fa-solid fa-gear"></i><%= link_to "Edit profile", "#" %></li>
         <br>
         <li><i class="fa-solid fa-right-from-bracket"></i><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       </ul>
@@ -50,7 +51,7 @@
 
 
   <%# Box with dashboard actions = container %>
-   <div class="container">
+   <div class="container-dash">
     <div class="cards_family">
        <%= image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661528068/Nanny%20N%20Kids/Sans_titre_13_qqmbyk.png",
           width: 190, crop: :fill)%>
