@@ -32,7 +32,7 @@ Rails.application.configure do
   end
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :local
+  config.active_storage.service = :cloudinary
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
@@ -79,5 +79,6 @@ Rails.application.configure do
   # api_key: "224572626746382"
   # api_secret: "vqjWExqYyL-zdZl4sCYzTSJZmoY"
   # secure: true
+
 
 end

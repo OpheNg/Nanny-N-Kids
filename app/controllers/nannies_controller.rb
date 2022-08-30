@@ -23,8 +23,8 @@ class NanniesController < ApplicationController
         if @nanny.save
             redirect_to bookings_path
         else
-        end 
-    end 
+        end
+    end
 
     def edit
         @user = current_user
@@ -45,21 +45,21 @@ class NanniesController < ApplicationController
         end
     end
 
-    def destroy 
+    def destroy
         @nanny = Nanny.find(params[:format])
         authorize @nanny
-        
+
         if @nanny.destroy
             redirect_to nannies_path
         else
         end
-    end 
+    end
 
-    private 
+    private
 
     def nanny_params
         params.require(:nanny).permit(:first_name, :last_name, :tel, :price_per_day)
-    end 
+    end
 
     def nanny_params_update
         params.require(:nanny).permit(:price_per_day)

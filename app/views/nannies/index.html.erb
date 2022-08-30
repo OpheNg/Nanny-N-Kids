@@ -6,15 +6,30 @@
       <% @nannies.each do |nanny| %>
         <div class="nanny-card">
 
-          <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661784842/holder_fuevmf.png", :width=>150, :height=>150, :crop=>"fill")%>
+          <%# <%= cl_image_tag @nanny.photo.key, height: 150, width: 150, crop: :fill %>
+
+          <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661784842/holder_fuevmf.png", :width=>160, :height=>160, :crop=>"fill")%>
 
           <div class="info">
+            <p class="my-nanny">
+              <% if nanny.user == current_user %>
+              my nanny <i class="fa-solid fa-image-portrait"></i>
+              <%end%>
+
+            </p>
             <ul>
 
+<<<<<<< HEAD
               <li>First name : <%= nanny.first_name %></li>
               <li>Last name : <%= nanny.last_name %></li>
               <li>Email : <%= nanny.email %></li>
               <li class="nanny-price">Price per day : <%= nanny.price_per_day %></li>
+=======
+              <li class="firstname"> <%= nanny.first_name %></li>
+              <li class="lastname"> <%= nanny.last_name %></li>
+              <li> <%= nanny.email %></li>
+              <li>Price per day : <%= nanny.price_per_day %></li>
+>>>>>>> dc04aa2d22cd2f13bc5b81086fc53e755dc0a5e1
               <li>nanny id : <%= nanny.id %></strong></li>
               <br>
               <li>created by user id : <%= nanny.user.email %>
@@ -22,9 +37,9 @@
                 <% if nanny.user == current_user %>
                 <%= link_to "Edit this Nanny", edit_nanny_path(nanny.user.id, nanny.id) %>
                 <br>
-                <%= link_to "Delete", nanny_path(nanny.user.id, nanny.id), method: :delete, data: { confirm: "Are you sure?" } %>
-                <% else %>
-                <%= link_to "👉 Book this Nanny", new_nanny_booking_path(nanny) %></li>
+                <%= link_to "Delete", nanny_path(nanny.user.id, nanny.id), method: :delete, data: { confirm: "Are you sure?" }, class:"delete" %>
+                <% else %> <br>
+                <%= link_to "👉 Book", new_nanny_booking_path(nanny), class:"book" %></li>
                 <% end %>
 
             </ul>
@@ -38,6 +53,7 @@
 <br>
 <br>
 <br>
-
-  <%= link_to "Home", dashboard_path %>
-   <%= link_to "Search", dashboard_path %>
+<div class="buttons">
+  <%= link_to "Home", dashboard_path, class:"button" %>
+   <%= link_to "Search", dashboard_path, class:"button" %>
+</div>
