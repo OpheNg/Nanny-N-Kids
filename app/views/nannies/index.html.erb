@@ -5,11 +5,14 @@
 
       <% @nannies.each do |nanny| %>
         <div class="nanny-card">
+          <% if nanny.photo.attached?%>
+            <%= cl_image_tag nanny.photo.key, height: 150, width: 150, crop: :fill %>
+          <%else %>
+           <% image_tag 'holder.png' %>
+          <% end %>
 
-          <%# <%= cl_image_tag @nanny.photo.key, height: 150, width: 150, crop: :fill %>
 
-          <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661784842/holder_fuevmf.png", :width=>160, :height=>160, :crop=>"fill")%>
-
+          <%# <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661784842/holder_fuevmf.png", :width=>160, :height=>160, :crop=>"fill")%>
           <div class="info">
             <p class="my-nanny">
               <% if nanny.user == current_user %>
@@ -19,17 +22,13 @@
             </p>
             <ul>
 
-<<<<<<< HEAD
-              <li>First name : <%= nanny.first_name %></li>
-              <li>Last name : <%= nanny.last_name %></li>
-              <li>Email : <%= nanny.email %></li>
-              <li class="nanny-price">Price per day : <%= nanny.price_per_day %></li>
-=======
+
+
               <li class="firstname"> <%= nanny.first_name %></li>
               <li class="lastname"> <%= nanny.last_name %></li>
               <li> <%= nanny.email %></li>
               <li>Price per day : <%= nanny.price_per_day %></li>
->>>>>>> dc04aa2d22cd2f13bc5b81086fc53e755dc0a5e1
+
               <li>nanny id : <%= nanny.id %></strong></li>
               <br>
               <li>created by user id : <%= nanny.user.email %>
