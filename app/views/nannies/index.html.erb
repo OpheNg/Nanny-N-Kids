@@ -3,13 +3,17 @@
 <div class= "result">
 
 
+
       <% @nannies.each do |nanny| %>
         <div class="nanny-card">
-          <% if nanny.photo.attached?%>
-            <%= cl_image_tag nanny.photo.key, height: 150, width: 150, crop: :fill %>
-          <%else %>
-           <% image_tag 'holder.png' %>
-          <% end %>
+          <div class="profimg">
+            <% if nanny.photo.attached?%>
+              <%= cl_image_tag nanny.photo.key, height: 150, width: 150, crop: :fill %>
+            <%else %>
+            <% image_tag 'holder.png' %>
+            <%end %>
+          </div>
+
 
 
           <%# <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661784842/holder_fuevmf.png", :width=>160, :height=>160, :crop=>"fill")%>
@@ -26,13 +30,21 @@
 
               <li class="firstname"> <%= nanny.first_name %></li>
               <li class="lastname"> <%= nanny.last_name %></li>
+              <br>
               <li> <%= nanny.email %></li>
+              <br>
+              <li class="li-address"> <%= nanny.address %></li>
+              <br>
+              <li> <%= nanny.description %></li>
+              <br>
               <li>Price per day : <%= nanny.price_per_day %></li>
 
-              <li>nanny id : <%= nanny.id %></strong></li>
+              <%#<li>nanny id : <%= nanny.id %>
               <br>
-              <li>created by user id : <%= nanny.user.email %>
+              <%# <li>created by user id : <%= nanny.user.email %>
               <br>
+
+            <div class="prof-links">
                 <% if nanny.user == current_user %>
                 <%= link_to "Edit this Nanny", edit_nanny_path(nanny.user.id, nanny.id) %>
                 <br>
@@ -40,12 +52,14 @@
                 <% else %> <br>
                 <%= link_to "👉 Book", new_nanny_booking_path(nanny), class:"book" %></li>
                 <% end %>
+            </div>
 
             </ul>
           </div>
 
         </div>
       <% end %>
+  
 
 </div>
 

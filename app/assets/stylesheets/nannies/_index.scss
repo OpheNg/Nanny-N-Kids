@@ -7,22 +7,34 @@ body {
 }
 
 .title {
-  font-size: 30px;
+  font-size: 40px;
   margin: 20px;
+  text-align: center;
+  color: #ff8d76;
 }
 
 .nanny-card {
-  background-color:#fcfdff;
+  background-color: white;
   padding: 16px;
+  padding-top: 0;
   margin: 16px;
-  border-radius: 6px;
+  border-radius: 15px;
   display:flex;
   align-items: center;
-  max-height: 300px;
+  flex-direction: column;
+  max-height: fit-content;
+  max-width: 260px;
+  box-shadow: 0px 0px 1px 1px rgb(189, 179, 179);
 }
 .nanny-card li {
   list-style: none;
 
+}
+.nanny-card .info {
+  text-align: center;
+}
+.nanny-card ul {
+  padding-left: 0;
 }
 .nanny-card .info .firstname{
 font-weight: bold;
@@ -64,7 +76,8 @@ color: #7897ab;
 
 .result {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  // grid-gap: 10px;
 }
 .buttons {
   padding: 16px;
@@ -90,4 +103,22 @@ color: #7897ab;
 }
 .my-nanny i{
   font-size: 16px;
+}
+.nanny-card .profimg{
+  background-color: rgb(169, 217, 209);
+  width: 260px;
+  height: 190px;
+  // text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px 15px 0 0;
+
+}
+.nanny-card .profimg img {
+  border-radius: 50%;
+
+  // text-align: center;
+  // display: table-cell;
+  // vertical-align: middle;
 }

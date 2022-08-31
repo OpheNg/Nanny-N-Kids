@@ -1,5 +1,5 @@
 .form {
-  height: 600px;
+  height: 800px;
   max-width: 400px;
   margin-left: 300px;
 }
@@ -33,7 +33,7 @@ input.btn:hover{
   // object-fit: fill;
   // opacity: 70;
   background-repeat:no-repeat;
-  background-size:contain;
+  background-size: cover;
   background-position:center;
 // opacity: 0.3;
 }
@@ -53,5 +53,5 @@ input.btn:hover{
   color:rgb(30, 106, 220);
   padding: 4px 6px;
   border-radius: 4px;
-  font-size: bold;
+  font-size: 700;
 }

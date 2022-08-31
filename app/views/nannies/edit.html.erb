@@ -3,10 +3,12 @@
 <h2> Nanny selected : </h2>
 <ul>
     <li>Created by user id : <%= @nanny.user.id %> </li>
-    <li>Nanny id n°<%= @nanny.id %></li>
-    <li>price_per_day : <%= @nanny.price_per_day %></li>
-    <li>Experience : <%= @nanny.experience %></li>
-    <li>Capacity :<%= @nanny.capacity %></li>
+    <li>Nanny id n°:<%= @nanny.id %></li>
+    <li>Price_per_day : <%= @nanny.price_per_day %></li>
+    <li>Address :<%= @nanny.address %>
+    <li>Description :<%= @nanny.description %>
+    <%# <li>Experience : <%= @nanny.experience %>
+    <%# <li>Capacity :<%= @nanny.capacity %>
 </ul>
 experience: 4, capacity:
 <h3>Please update the info by filling this form</h3>
@@ -15,6 +17,8 @@ experience: 4, capacity:
 
 <%= simple_form_for [@nanny] do |f| %>
   <%= f.input :price_per_day %>
+  <%= f.input :address %>
+  <%= f.input :description %>
   <%= f.button :submit %>
 
 <% end %>

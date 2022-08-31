@@ -17,17 +17,21 @@
     <br>
 
     <div class="form">
+      <div class ="col-sm-12 ">
 
         <%= simple_form_for @nanny do |f| %>
           <%= f.input :first_name %>
           <%= f.input :last_name %>
           <%= f.input :photo, as: :file %>
           <%= f.input :email %>
+          <%= f.input :address %>
+          <%= f.input :description, type:"textarea"%>
           <%= f.input :tel %>
           <%= f.input :price_per_day %>
           <br>
           <%= f.button :submit %>
         <% end %>
+      </div>
 
     </div>
 
