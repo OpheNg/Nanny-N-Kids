@@ -33,11 +33,11 @@
               <br>
               <li> <%= nanny.email %></li>
               <br>
-              <li class="li-address"> <%= nanny.address %></li>
+              <li class="li-address"> <i class="fa-solid fa-location-pin"></i> <%= nanny.address %></li>
               <br>
               <li> <%= nanny.description %></li>
               <br>
-              <li>Price per day : <%= nanny.price_per_day %></li>
+              <li class="price">Price per day : <br> <b><%= nanny.price_per_day %> £</b></li>
 
               <%#<li>nanny id : <%= nanny.id %>
               <br>
@@ -59,7 +59,7 @@
 
         </div>
       <% end %>
-  
+
 
 </div>
 
