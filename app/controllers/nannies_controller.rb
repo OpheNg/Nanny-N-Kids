@@ -19,7 +19,7 @@ class NanniesController < ApplicationController
     authorize @nanny
 
     if @nanny.save
-      redirect_to bookings_path
+      redirect_to nannies_path
     else
     end
   end
