@@ -52,10 +52,13 @@ body {
   border-radius: 5px;
   box-shadow: 1px 2px 2px 1px #fdeedc;
   height: 500px;
+  min-width: fit-content;
   padding-top: 20px;
   background-color: #fdeedc7a;
   box-shadow: 1px 2px 2px 1px  #bcd0dd;
+
 }
+
 .side .profile .mail{
   color:#7897ab;
 }
@@ -99,11 +102,15 @@ body {
   width: 150px;
   padding: 24px 0;
 }
+
+
+
 .container-dash {
   margin: 52px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 8px;
+  grid-gap: 10px;
+
 }
 @media(max-width: 992px) {
   .container-dash {
@@ -183,7 +190,8 @@ body {
   border-radius: 4px;
   // padding: 16px;
   text-align: center;
-  min-width: 400px;
+  width: 500px;
+
 }
 
 .cards_family h2{

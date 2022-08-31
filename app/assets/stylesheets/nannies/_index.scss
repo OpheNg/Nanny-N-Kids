@@ -24,7 +24,11 @@ body {
   flex-direction: column;
   max-height: fit-content;
   max-width: 260px;
-  box-shadow: 0px 0px 1px 1px rgb(189, 179, 179);
+  box-shadow: 2px 1Px 1px rgb(215, 224, 236);
+  position: relative;
+}
+.nanny-card:hover{
+  border: solid rgb(189, 188, 188) 1px;
 }
 .nanny-card li {
   list-style: none;
@@ -32,6 +36,7 @@ body {
 }
 .nanny-card .info {
   text-align: center;
+
 }
 .nanny-card ul {
   padding-left: 0;
@@ -62,22 +67,91 @@ color: #7897ab;
   font-weight: 600;
 
 }
-.nanny-card .info .book {
+.nanny-card .prof-links{
+  text-align: center;
+}
+.nanny-card .prof-links a.book {
   border: solid lightgray 1px;
   border-radius: 4px;
   padding: 6px 10px;
+  text-decoration: none;
+  // background-color: #5f7cefad;
+  font-weight: 400;
+  color: rgb(76, 135, 230);
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+
 
 
 }
-.nanny-card .info .book :hover{
-  font-weight: 600;
+.nanny-card .prof-links a.book:hover{
+  // font-weight: 600;
   border: solid grey 1px;
+  font-weight: 600;
+  color: rgb(154, 151, 188);
+  // background-color: rgb(202, 224, 249);
+  box-shadow: 2px 1Px 1px rgb(215, 224, 236);
+}
+
+.nanny-card .prof-links a.edit {
+  border: solid lightgray 1px;
+  border-radius: 4px;
+  padding: 6px 10px;
+  text-decoration: none;
+  // background-color: #5f7cefad;
+  font-weight: 400;
+  color: rgb(76, 135, 230);
+  // position: absolute;
+  // bottom: 10px;
+  text-align: center;
+
+}
+.nanny-card .prof-links a.edit:hover{
+  // font-weight: 600;
+  border: solid grey 1px;
+  font-weight: 600;
+  color: rgb(154, 151, 188);
+  // background-color: rgb(202, 224, 249);
+  box-shadow: 2px 1Px 1px rgb(215, 224, 236);
+}
+.nanny-card .prof-links a.delete {
+  border: solid lightgray 1px;
+  border-radius: 4px;
+  padding: 6px 10px;
+  text-decoration: none;
+  // background-color: #5f7cefad;
+  font-weight: 400;
+  color: rgb(76, 135, 230);
+  // position: absolute;
+  // bottom: 10px;
+  text-align: center;
+
+}
+.nanny-card .prof-links a.delete:hover{
+  // font-weight: 600;
+  border: solid grey 1px;
+  font-weight: 600;
+  color: rgb(246, 152, 108);
+  // background-color: rgb(202, 224, 249);
+  box-shadow: 2px 1Px 1px rgb(215, 224, 236);
 }
 
 .result {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   // grid-gap: 10px;
+}
+@media(max-width: 992px) {
+  .result {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .result {
+    grid-template-columns: 1fr;
+  }
 }
 .buttons {
   padding: 16px;

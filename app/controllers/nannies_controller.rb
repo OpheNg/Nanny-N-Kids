@@ -48,7 +48,7 @@ class NanniesController < ApplicationController
     authorize @nanny
 
     if @nanny.destroy
-        redirect_to nannies_path
+      redirect_to nannies_path
     else
     end
   end

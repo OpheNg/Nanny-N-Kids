@@ -39,23 +39,25 @@
               <br>
               <li class="price">Price per day : <br> <b><%= nanny.price_per_day %> £</b></li>
 
+            </ul>
+          </div>
               <%#<li>nanny id : <%= nanny.id %>
               <br>
               <%# <li>created by user id : <%= nanny.user.email %>
-              <br>
+
 
             <div class="prof-links">
                 <% if nanny.user == current_user %>
-                <%= link_to "Edit this Nanny", edit_nanny_path(nanny.user.id, nanny.id) %>
-                <br>
+                <%= link_to "Edit", edit_nanny_path(nanny.user.id, nanny.id), class:"edit" %>
+                <br><br>
                 <%= link_to "Delete", nanny_path(nanny.user.id, nanny.id), method: :delete, data: { confirm: "Are you sure?" }, class:"delete" %>
                 <% else %> <br>
                 <%= link_to "👉 Book", new_nanny_booking_path(nanny), class:"book" %></li>
                 <% end %>
             </div>
 
-            </ul>
-          </div>
+
+
 
         </div>
       <% end %>
