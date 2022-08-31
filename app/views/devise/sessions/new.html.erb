@@ -14,12 +14,13 @@
 <%# </div> %>
 
 <div class="landing-img">
-  <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661068667/Nanny%20N%20Kids/profiles.jpeg_qmit6f.jpg",
+  <%= image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661068667/Nanny%20N%20Kids/profiles.jpeg_qmit6f.jpg",
       width: 700, height: 400, crop: :fill)%>
 
-<div class="container">
+<div class="container-landing">
   <div class ="row">
-    <div class ="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4">
+    <%# <div class ="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4"> %>
+     <div class ="col-12 col-sm-8 col-md-4 ">
 
     <%# Pour le form, il faut que je supprime le display grid , mais je ne trouve pas le fichier scss correspondant %>
     <%# il faut aussi supp la nav bar dans le fichier application, pour les pages sign in et sign up, voir path %>
