@@ -60,6 +60,6 @@ class NanniesController < ApplicationController
   end
 
   def nanny_params_update
-    params.require(:nanny).permit(:price_per_day, :address, :description)
+    params.require(:nanny).permit(:price_per_day, :address, :description, :email)
   end
 end

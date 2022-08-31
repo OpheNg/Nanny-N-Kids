@@ -1,0 +1,59 @@
+.nanny-edition{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  background-image: url('edit-nanny.jpg');
+  height: 800px;
+}
+
+
+.selected-nanny{
+  border-radius: 4px;
+  box-shadow: 0 0 1px 1px rgb(204, 200, 200);
+  padding: 16px 40px;
+  display: flex;
+  width: 600px;
+  background-color: white;
+}
+.selected-nanny li {
+  list-style: none;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 16px;
+}
+.selected-nanny ul{
+  padding-left: 0;
+}
+.selected-nanny img{
+  width: 180px;
+  border-radius: 50%;
+  text-align: center;
+}
+.bloc-nanny{
+  padding-left: 40px;
+}
+
+.edit-nanny-form {
+  width: 500px;
+
+}
+.edit-nanny-form input{
+  text-align: center;
+}
+
+a {
+  border: solid 1px white;
+  border-radius: 4px;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #7897ab;
+  font-weight: bold;
+  box-shadow: 1px 1px 1px 1px gray;
+}
+h2{
+  padding-top: 16px;
+  color: #4f7e9d;
+  
+}
