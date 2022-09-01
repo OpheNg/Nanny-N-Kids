@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
-
-before_action :authenticate_user!
-include Pundit
+  before_action :authenticate_user!
+  include Pundit
 
   # Pundit: white-list approach.
   after_action :verify_authorized, except: :index, unless: :skip_pundit?
@@ -22,6 +21,6 @@ include Pundit
 
   def after_sign_in_path_for(resource)
     dashboard_path(current_user)
-  end # your pathend
-
+  end
+  # your pathend
 end

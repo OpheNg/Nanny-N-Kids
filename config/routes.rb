@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'profile', to: 'users#profile'
 
-  get'search_a_nanny', to: 'users#search_a_nanny'
+  # get'search_a_nanny', to: 'users#search_a_nanny'
   get 'nanny_index', to: 'users#nanny_index'
 
   # A supprimer ??
@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   #création d'une nouvelle route pour avoir un url de type /users/1 qui redirige vers la page dashboard
   get '/users/:id', to: 'users#dashboard', as: 'user'
+
 
 
   resources :nannies
