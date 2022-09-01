@@ -3,6 +3,13 @@ class NanniesController < ApplicationController
     @user = current_user
     @nannies = Nanny.all
     @nannies = policy_scope(Nanny).order(created_at: :desc)
+
+    @markers = @nannies.geocoded.map do |nanny|
+      {
+        lat: nanny.latitude,
+        lng: nanny.longitude
+      }
+    end
   end
 
   def new

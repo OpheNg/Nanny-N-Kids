@@ -139,12 +139,12 @@ color: #7897ab;
 
 .result {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   // grid-gap: 10px;
 }
 @media(max-width: 992px) {
   .result {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -203,4 +203,28 @@ color: #7897ab;
   // text-align: center;
   // display: table-cell;
   // vertical-align: middle;
+}
+.search{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+@media(max-width: 992px) {
+  .search {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .search {
+    grid-template-columns: 1fr;
+  }
+}
+.map{
+  position: sticky;
+  top: 20px;
+  border-radius: 10px;
+  margin: 16px;
+  width: 60%;
 }

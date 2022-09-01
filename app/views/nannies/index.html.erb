@@ -1,68 +1,81 @@
+
+<%# <%= @markers %>
+
+
+
+
 <h1 class="title">All the Nannies :</h1>
 <br>
-<div class= "result">
+
+<div class="search">
+  <div class= "result">
 
 
 
-      <% @nannies.each do |nanny| %>
-        <div class="nanny-card">
-          <div class="profimg">
-            <% if nanny.photo.attached?%>
-              <%= cl_image_tag nanny.photo.key, height: 150, width: 150, crop: :fill %>
-            <%else %>
-            <% image_tag 'holder.png' %>
-            <%end %>
-          </div>
-
-
-
-          <%# <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661784842/holder_fuevmf.png", :width=>160, :height=>160, :crop=>"fill")%>
-          <div class="info">
-            <p class="my-nanny">
-              <% if nanny.user == current_user %>
-              my nanny <i class="fa-solid fa-image-portrait"></i>
-              <%end%>
-
-            </p>
-            <ul>
-
-
-
-              <li class="firstname"> <%= nanny.first_name %></li>
-              <li class="lastname"> <%= nanny.last_name %></li>
-              <br>
-              <li> <%= nanny.email %></li>
-              <br>
-              <li class="li-address"> <i class="fa-solid fa-location-pin"></i> <%= nanny.address %></li>
-              <hr>
-              <li> <%= nanny.description %></li>
-              <hr>
-              <li class="price">Price per day : <br> <b><%= nanny.price_per_day %> £</b></li>
-
-            </ul>
-          </div>
-              <%#<li>nanny id : <%= nanny.id %>
-              <br>
-              
-              <%# <li>created by user id : <%= nanny.user.email%>
-
-
-            <div class="prof-links">
-                <% if nanny.user == current_user %>
-                <%= link_to "Edit", edit_nanny_path(nanny.user.id, nanny.id), class:"edit" %>
-                <br><br>
-                <%= link_to "Delete", nanny_path(nanny.user.id, nanny.id), method: :delete, data: { confirm: "Are you sure?" }, class:"delete" %>
-                <% else %> <br>
-                <%= link_to "👉 Book", new_nanny_booking_path(nanny), class:"book" %></li>
-                <% end %>
+        <% @nannies.each do |nanny| %>
+          <div class="nanny-card">
+            <div class="profimg">
+              <% if nanny.photo.attached?%>
+                <%= cl_image_tag nanny.photo.key, height: 150, width: 150, crop: :fill %>
+              <%else %>
+              <% image_tag 'holder.png' %>
+              <%end %>
             </div>
 
 
 
+            <%# <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661784842/holder_fuevmf.png", :width=>160, :height=>160, :crop=>"fill")%>
+            <div class="info">
+              <p class="my-nanny">
+                <% if nanny.user == current_user %>
+                my nanny <i class="fa-solid fa-image-portrait"></i>
+                <%end%>
 
-        </div>
-      <% end %>
+              </p>
+              <ul>
 
+
+
+                <li class="firstname"> <%= nanny.first_name %></li>
+                <li class="lastname"> <%= nanny.last_name %></li>
+                <br>
+                <li> <%= nanny.email %></li>
+                <br>
+                <li class="li-address"> <i class="fa-solid fa-location-pin"></i> <%= nanny.address %></li>
+                <hr>
+                <li> <%= nanny.description %></li>
+                <hr>
+                <li class="price">Price per day : <br> <b><%= nanny.price_per_day %> £</b></li>
+
+              </ul>
+            </div>
+                <%#<li>nanny id : <%= nanny.id %>
+                <br>
+
+                <%# <li>created by user id : <%= nanny.user.email%>
+
+
+              <div class="prof-links">
+                  <% if nanny.user == current_user %>
+                  <%= link_to "Edit", edit_nanny_path(nanny.user.id, nanny.id), class:"edit" %>
+                  <br><br>
+                  <%= link_to "Delete", nanny_path(nanny.user.id, nanny.id), method: :delete, data: { confirm: "Are you sure?" }, class:"delete" %>
+                  <% else %> <br>
+                  <%= link_to "👉 Book", new_nanny_booking_path(nanny), class:"book" %></li>
+                  <% end %>
+              </div>
+
+          </div>
+        <% end %>
+
+  </div>
+
+
+  <div class="map" style="width: 100%; height: 500px;"
+    data-controller="mapbox"
+    data-mapbox-markers-value="<%= @markers.to_json %>"
+    data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 
 </div>
 
