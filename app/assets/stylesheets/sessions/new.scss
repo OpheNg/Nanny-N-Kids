@@ -1,6 +1,29 @@
-.row{
-  text-align: right;
+// .row{
+//   text-align: right;
+// }
+// .simplr_for new_user{
+//   width: 400px;
+// }
+
+.landing-img {
+  width: auto;
 }
-.simplr_for new_user{
+
+.container-landing {
   width: 400px;
+  padding-left: 30px;
+  text-align: left;
+  color: black;
+}
+
+.form-control {
+  box-sizing:border-box;
+  width: 380px;
+
+}
+
+.container-landing h2 {
+  margin-bottom: 20px;
+  font-size: 25px;
+  text-align: center;
 }
