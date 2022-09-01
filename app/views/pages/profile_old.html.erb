@@ -1,0 +1,62 @@
+<div class="top">
+  <h1><i class="fa-solid fa-user"> </i> My Profile </h1>
+  <h1 class="blue"> Nanny & Kids </h1>
+</div>
+
+<div class="container">
+
+ <div class="dash">
+   <div class="side">
+    <h3>Profile</h3>
+    <p>Sunday, 21st August 2022</p>
+    <img class="avatar"src="https://via.placeholder.com/150" alt="user pic">
+    <p>Full name</p>
+    <ul class="notif">
+      <li><i class="fa-solid fa-location-dot"></i><a href="#">9 rue de la Paix, Paris</a></li>
+      <li><i class="fa-solid fa-at"></i><a href="#">mail@mail.com</a></li>
+      <li><i class="fa-solid fa-phone"></i><a href="#">00 66 77 88 99</a></li>
+    </ul>
+    </div>
+
+        <%= form_for :user, url: user_index_path do |f| %>
+        <div class="last_name">
+          <p>
+            <%= f.label :last_name %><br>
+            <%= f.text_field :last_name %>
+          </p>
+           <p>
+            <%= f.submit :Update %>
+          </p>
+         </div>
+          <p>
+            <%= f.label :first_name %><br>
+            <%= f.text_field :first_name %>
+          </p>
+
+          <p>
+            <%= f.label :address %><br>
+            <%= f.text_area :address %>
+          </p>
+         <p>
+            <%= f.label :email %><br>
+            <%= f.text_field :email %>
+          </p>
+         <p>
+            <%= f.label :phone %><br>
+            <%= f.text_field :phone %>
+          </p>
+          <p>
+            <%= f.submit :Update %>
+          </p>
+        <% end %>
+
+</div>
+
+<%# <div class="text-center">
+   <button type="button" class="btn btn-dark">Switch to Nanny Profile</button>
+ </div> %>
+<%# <ul class="notif">
+      <li><i class="fa-solid fa-bell"></i><a href="#">Notifications</a></li>
+      <li><i class="fa-solid fa-gear"></i><a href="#">Settings</a></li>
+      <li><i class="fa-solid fa-right-from-bracket"></i><%= link_to "Log out", root_path %></li>
+    <%# </ul> %>

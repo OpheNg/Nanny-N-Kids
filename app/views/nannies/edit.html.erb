@@ -1,21 +1,52 @@
-<h1> Edit your Nanny </h1>
+<h2> Edit Nanny's profile </h2>
+<br>
+<%# <h4>Selected nanny:</h4> %>
 
-<h2> Nanny selected : </h2>
-<ul>
-    <li>Created by user id : <%= @nanny.user.id %> </li>
-    <li>Nanny id n°<%= @nanny.id %></li>
-    <li>price_per_day : <%= @nanny.price_per_day %></li>
-    <li>Experience : <%= @nanny.experience %></li>
-    <li>Capacity :<%= @nanny.capacity %></li>
-</ul>
-experience: 4, capacity:
-<h3>Please update the info by filling this form</h3>
+<div class="nanny-edition">
 
-<%# remmplacer @user par @nanny, faut changer toutes les routes pour le create et le new %>
 
-<%= simple_form_for [@nanny] do |f| %>
-  <%= f.input :price_per_day %>
-  <%= f.button :submit %>
-<% end %>
+    <div class="selected-nanny">
+      <%= cl_image_tag @nanny.photo.key, height: 150, width: 150, crop: :fill %>
 
-<%= link_to "Back to index", nannies_path %>
+      <div class="bloc-nanny">
+        <h2> <%= @nanny.first_name %> <%= @nanny.last_name %></h2>
+        <ul>
+            <%# <li>Created by user id : <%= @nanny.user.id %>
+            <%# <li>Nanny id n°:<%= @nanny.id %>
+          <li><i class="fa-solid fa-location-dot"></i> <b>  Address</b> :<%= @nanny.address %>
+          <li><i class="fa-solid fa-at"></i> <b>  Email</b> :<%= @nanny.email %>
+          <li><i class="fa-solid fa-dollar-sign"></i> <b>  Price per day </b>: <%= @nanny.price_per_day %></li>
+          <li><i class="fa-solid fa-user"></i> <b>  Description</b> :<%= @nanny.description %></li>
+        </ul>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="edit-nanny-form">
+        <h3> Modify your profile here :</h3>
+        <br>
+
+        <%# remmplacer @user par @nanny, faut changer toutes les routes pour le create et le new %>
+
+        <%= simple_form_for [@nanny] do |f| %>
+          <%= f.input :photo, as: :file %>
+          <%= f.input :address %>
+          <%= f.input :email %>
+          <%= f.input :description %>
+          <%= f.input :price_per_day %>
+
+          <%= f.button :submit %>
+
+        <% end %>
+    </div>
+
+
+
+</div>
+<br>
+<br>
+
+ <%= link_to "Back to index", nannies_path, class:"edit-page-link" %>
+ <br>
+ <br>
