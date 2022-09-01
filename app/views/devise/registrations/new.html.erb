@@ -14,7 +14,7 @@
 <%# </div> %>
 
 <div class="landing-img">
-  <%= cl_image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661068667/Nanny%20N%20Kids/profiles.jpeg_qmit6f.jpg",
+  <%= image_tag("https://res.cloudinary.com/dhxefoe7j/image/upload/v1661068667/Nanny%20N%20Kids/profiles.jpeg_qmit6f.jpg",
       width: 700, height: 400, crop: :fill)%>
 
   <%# <h3>
@@ -41,7 +41,7 @@
           <%= f.error_notification %>
 
           <div class="form-inputs">
-          
+
             <%= f.input :email,
                         required: true,
                         autofocus: true,

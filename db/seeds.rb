@@ -27,5 +27,3 @@ nanny_3 = Nanny.create(last_name: "SURREAU", first_name: "Josiane", address: "73
 booking_1 = Booking.create(nanny_id: 1, user_id: 1, start_date: Date.today - 6, end_date: Date.today - 1, status: "passed", total_price: 6.9)
 booking_2 = Booking.create(nanny_id: 2, user_id: 2, start_date: Date.today + 1, end_date: Date.today + 3, status: "Next booking", total_price: 300)
 booking_3 = Booking.create(nanny_id: 3, user_id: 3, start_date: Date.today + 1, end_date: Date.today + 3, status: "Next booking", total_price: 300)
-
-
