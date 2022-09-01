@@ -1,4 +1,5 @@
- <div class="container">
+ <div class="container-booking">
+
     <div class="nanny-choice">
         <h3>Your super nanny</h3>
         <p class="price"> PRICE PER DAY : <%= @nanny.price_per_day %></p>
@@ -8,10 +9,12 @@
         <p>FIRST NAME : <%= @nanny.first_name %></p>
         <hr>
         <p>LAST NAME : <%=  @nanny.last_name %></p>
+        <hr>
     </div>
 
-      <div class="booking-info">
-        <h3>Create Booking</h3>
+      <div class="form-info">
+      <h3 class="booking-title">Create your booking</h3>
+
         <%= simple_form_for [@nanny, @booking] do |f| %>
 
         <%= f.input :start_date, error: 'S is mandatory, please specify one' %>
