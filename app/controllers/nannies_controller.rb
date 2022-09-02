@@ -7,7 +7,8 @@ class NanniesController < ApplicationController
     @markers = @nannies.geocoded.map do |nanny|
       {
         lat: nanny.latitude,
-        lng: nanny.longitude
+        lng: nanny.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { nanny: nanny })
       }
     end
   end
