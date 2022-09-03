@@ -1,4 +1,9 @@
 <h1>Conversation feed</h1>
+<br>
+<br>
+
+
+<h4 class="conv">Conversation with <span class="mami">Mamie Suzette.</span></h4>
 
 <div class="page-content page-container" id="page-content">
     <div class="padding">
@@ -13,11 +18,11 @@
 
               <div class="ps-container ps-theme-default ps-active-y" id="chat-content" style="overflow-y: scroll !important; height:400px !important;">
                 <div class="media media-chat">
-                  <img class="avatar" src="https://img.icons8.com/color/36/000000/administrator-male.png" width ="80px" alt="...">
+                  <%= image_tag('https://res.cloudinary.com/dhxefoe7j/image/upload/v1661771495/Nanny%20N%20Kids/avatar_Ophe_uar2wv.jpg', crop: :fill, class:'avatarr') %>
                   <div class="media-body">
                     <p>Hi</p>
                     <p>How are you ...???</p>
-                    <p>What are you doing tomorrow?<br> Can we come up a bar?</p>
+                    <p>What are you doing tomorrow?<br> Can you watch for Andrea in the morning?</p>
                     <p class="meta"><time datetime="2018">23:58</time></p>
                   </div>
                 </div>
@@ -28,55 +33,55 @@
                   <div class="media-body">
                     <p>Hiii, I'm good.</p>
                     <p>How are you doing?</p>
-                    <p>Long time no see! Tomorrow office. will be free on sunday.</p>
+                    <p>No problem for tomorrow! what time?</p>
                     <p class="meta"><time datetime="2018">00:06</time></p>
                   </div>
                 </div>
 
                 <div class="media media-chat">
-                  <img class="avatar" src="https://img.icons8.com/color/36/000000/administrator-male.png" width ="80px" alt="...">
+                  <%= image_tag('https://res.cloudinary.com/dhxefoe7j/image/upload/v1661857073/Nanny%20N%20Kids/profile5_lybhad.jpg', crop: :fill, class:'avatarr') %>
                   <div class="media-body">
                     <p>Okay</p>
-                    <p>We will go on sunday? </p>
+                    <p>Great thank you! 9AM will be perfect! We'll be back at 6PM</p>
                     <p class="meta"><time datetime="2018">00:07</time></p>
                   </div>
                 </div>
 
                 <div class="media media-chat media-chat-reverse">
                   <div class="media-body">
-                    <p>That's awesome!</p>
-                    <p>I will meet you Sandon Square sharp at 10 AM</p>
-                    <p>Is that okay?</p>
+                    <p>Ok ! Good for me!</p>
+                    <p>Do you want me to come over?</p>
+                    <p>Or I take Andrea at home?</p>
                     <p class="meta"><time datetime="2018">00:09</time></p>
                   </div>
                 </div>
 
                 <div class="media media-chat">
-                  <img class="avatar" src="https://img.icons8.com/color/36/000000/administrator-male.png"width ="80px" alt="...">
+                  <%= image_tag('https://res.cloudinary.com/dhxefoe7j/image/upload/v1661771495/Nanny%20N%20Kids/avatar_Ophe_uar2wv.jpg', crop: :fill, class:'avatarr') %>
                   <div class="media-body">
-                    <p>Okay i will meet you on Sandon Square </p>
+                    <p>We can drive her to your place!</p>
                     <p class="meta"><time datetime="2018">00:10</time></p>
                   </div>
                 </div>
 
                 <div class="media media-chat media-chat-reverse">
                   <div class="media-body">
-                    <p>Do you have pictures of Matley Marriage?</p>
+                    <p>Ok great!</p>
                     <p class="meta"><time datetime="2018">00:10</time></p>
                   </div>
                 </div>
 
                 <div class="media media-chat">
-                  <img class="avatar" src="https://img.icons8.com/color/36/000000/administrator-male.png" width ="80px" alt="...">
+                  <%= image_tag('https://res.cloudinary.com/dhxefoe7j/image/upload/v1661857073/Nanny%20N%20Kids/profile5_lybhad.jpg', crop: :fill, class:'avatarr') %>
                   <div class="media-body">
-                    <p>Sorry I don't have. i changed my phone.</p>
+                    <p>See you tomorrow!</p>
                     <p class="meta"><time datetime="2018">00:12</time></p>
                   </div>
                 </div>
 
                 <div class="media media-chat media-chat-reverse">
                   <div class="media-body">
-                    <p>Okay then see you on sunday!!</p>
+                    <p>Yep! have a good day!</p>
                     <p class="meta"><time datetime="2018">00:12</time></p>
                   </div>
                 </div>
@@ -84,7 +89,11 @@
               <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; height: 0px; right: 2px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 2px;"></div></div></div>
 
               <div class="publisher bt-1 border-light">
-                <img class="avatar avatar-xs" src="https://img.icons8.com/color/36/000000/administrator-male.png"width ="80px" alt="...">
+
+                <%# <img class="avatarr avatar-xs" src="https://img.icons8.com/color/36/000000/administrator-male.png"width ="80px" alt="..."> %>
+
+< <%= image_tag('https://res.cloudinary.com/dhxefoe7j/image/upload/v1661771495/Nanny%20N%20Kids/avatar_Ophe_uar2wv.jpg', crop: :fill, class:'avatarr') %>
+
                 <input class="publisher-input" type="text" placeholder="Write something">
                 <span class="publisher-btn file-group">
                   <i class="fa fa-paperclip file-browser"></i>

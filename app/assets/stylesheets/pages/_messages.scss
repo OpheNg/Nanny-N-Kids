@@ -106,11 +106,11 @@ h4.card-title {
   transition: background-color .2s linear;
 }
 
-.media .avatar {
+.media .avatarr {
   flex-shrink: 0;
 }
 
-img.avatar {
+img.avatarr {
   width: 80px;
   height: 80px;
 
@@ -303,4 +303,8 @@ button, input, optgroup, select, textarea {
 
 .text-info {
   color: #48b0f7 !important;
+}
+
+.conv span.mami{
+  color: rgb(240, 163, 121);
 }
