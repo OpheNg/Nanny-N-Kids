@@ -1,0 +1,75 @@
+.edit-booking-box{
+  // border: solid rgb(124, 151, 178);
+  // box-shadow: 0px 0px 0px 2px rgb(180, 206, 232);
+  // border-radius: 6px;
+  padding: 24px;
+  margin: 0 auto;
+  width: 100%;
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_37/v1662142481/Nanny%20N%20Kids/desk_w0u9n6.jpg');
+  background-size:cover;
+  background-position: center;
+  height: 800px;
+
+}
+.edit-booking-box h2{
+  text-align: center;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+.recap {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.recap .bookdate {
+  color: rgb(231, 171, 134);
+
+}
+.recap ul{
+  list-style: none;
+  padding-left: 0;
+}
+.recap li{
+  padding: 6px;
+  padding-left: 0;
+}
+
+.change {
+  margin: 20px auto;
+}
+.changes h4{
+  text-align: center;
+  font-weight: 600;
+  color: rgb(74, 100, 126);
+}
+
+.changes form{
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.right-text{
+  padding: 8px 16px;
+  text-align: right;
+}
+
+.backtoindex{
+  padding: 20px 30px;
+  height: 60px;
+}
+
+
+.backtoindex a{
+  border: rgb(135, 160, 186) solid 1px;
+  border-radius: 4px;
+  padding: 6px 10px;
+  color: #0A98DD;
+
+}
+.backtoindex a:hover{
+  color:#0A98DD ;
+  border: rgb(82, 99, 150) solid 1px;
+  font-weight: 700;
+}

@@ -8,12 +8,14 @@
 <br>
 
 <div class="search">
+
+
   <div class= "result">
 
-
-
         <% @nannies.each do |nanny| %>
+
           <div class="nanny-card">
+
             <div class="profimg">
               <% if nanny.photo.attached?%>
                 <%= cl_image_tag nanny.photo.key, height: 150, width: 150, crop: :fill %>
@@ -41,7 +43,7 @@
                 <br>
                 <li> <%= nanny.email %></li>
                 <br>
-                <li class="li-address"> <i class="fa-solid fa-location-pin"></i> <%= nanny.address %></li>
+                <li class="li-address"> <i class="fa-solid fa-location-pin"></i> <%= link_to nanny.address %></li>
                 <hr>
                 <li> <%= nanny.description %></li>
                 <hr>
@@ -71,7 +73,7 @@
   </div>
 
 
-  <div class="map">
+  <%# <div class="map"> %>
 
     <%# <div class="search-form">
       <%# #barre de recherche %>
@@ -84,7 +86,7 @@
     data-mapbox-markers-value="<%= @markers.to_json %>"
     data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
-  </div>
+  <%# </div> %>
 
 </div>
 

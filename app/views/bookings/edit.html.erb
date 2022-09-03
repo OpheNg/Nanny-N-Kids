@@ -1,20 +1,37 @@
-<h1> Edit your Booking </h1>
+<h1 class="right-text"> Edit your Reservation  <i class="fa-sharp fa-solid fa-user-pen"></i></h1>
 
-<h2> Booking selected : </h2>
-<ul>
-    <li>Booking id n°<%= @booking.id %></li>
-    <li>Start date : <%= @booking.start_date %></li>
-    <li>End date : <%= @booking.end_date %></li>
-    <li>Nanny id booked n°<%= @booking.nanny.id %></li>
-</ul>
+<div class="edit-booking-box">
 
-<h3>Please update the info by filling this form</h3>
+  <div class="recap">
 
-<%# remmplacer @user par @nanny, faut changer toutes les routes pour le create et le new %>
+    <h2> Booking details:</h2>
+    <ul>
+        <li><i class="fa-solid fa-book"></i> Booking n°: <b><%= @booking.id %></b></li>
+        <li class="bookdate"><i class="fa-sharp fa-solid fa-calendar"></i> From : <b><%= @booking.start_date %></b></li>
+        <li class="bookdate"><i class="fa-solid fa-building-circle-check"></i> To : <b><%= @booking.end_date %></b></li>
+        <li><i class="fa-solid fa-user"></i> Nanny's name : <b><%= @booking.nanny.first_name %> <%= @booking.nanny.last_name %></b></li>
+        <li><i class="fa-solid fa-tag"></i> Nanny n°: <b><%= @booking.nanny.id %></b></li>
+    </ul>
 
-<%= simple_form_for [@nanny, @booking] do |f| %>
-  <%= f.input :end_date %>
-  <%= f.button :submit %>
-<% end %>
+  </div>
 
-<%= link_to "Back to index", bookings_path %>
+
+  <div class="changes">
+
+    <h4 class="update-field">Please update your booking :</h4>
+
+    <%# remmplacer @user par @nanny, faut changer toutes les routes pour le create et le new %>
+    <%= simple_form_for [@nanny, @booking] do |f| %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%= f.button :submit %>
+    <% end %>
+
+  </div>
+
+</div>
+
+
+ <div class="backtoindex">
+    <%= link_to "Back to index", bookings_path %>
+  </div>
