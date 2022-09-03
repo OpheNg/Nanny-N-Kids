@@ -308,3 +308,27 @@ button, input, optgroup, select, textarea {
 .conv span.mami{
   color: rgb(240, 163, 121);
 }
+
+.messlink {
+  height: 90px;
+}
+.messlink a.homemess {
+  border: rgb(135, 160, 186) solid 1px;
+  border-radius: 4px;
+  padding: 6px 10px;
+  color: #0A98DD;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.messlink a.homemess:hover{
+  color:#0A98DD ;
+  border: rgb(82, 99, 150) solid 1px;
+  font-weight: 700;
+}
+
+.total{
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_40/v1662201377/Nanny%20N%20Kids/pexels-vlad-che%C8%9Ban-3842751_emm22c.jpg');
+  background-position: center;
+  background-size: cover;
+
+}
