@@ -1,3 +1,15 @@
 .fullname {
   color:#7897ab ;
 }
+//  .bookwindow {
+//   text-decoration: none;
+// }
+.mapboxgl-popup-content a.bookwindow{
+  text-decoration: none;
+  color: rgb(92, 202, 172);
+}
+
+.mapboxgl-popup-content a.bookwindow:hover{
+color: rgb(213, 145, 97);
+font-weight: 600;
+}

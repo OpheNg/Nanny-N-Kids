@@ -1,3 +1,4 @@
 <h4 class="fullname"><%= nanny.first_name %> <%= nanny.last_name %></h4>
 <p><%= nanny.address %></p>
 <p><b><%= nanny.price_per_day %> £</b></p>
+<p><%= link_to "Book", new_nanny_booking_path(nanny), class:"bookwindow" %></p>
