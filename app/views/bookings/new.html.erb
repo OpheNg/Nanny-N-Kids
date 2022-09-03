@@ -17,7 +17,7 @@
 
           <%= simple_form_for [@nanny, @booking] do |f| %>
 
-          <%= f.input :start_date, error: 'S is mandatory, please specify one' %>
+          <%= f.input :start_date %>
           <%= f.input :end_date %>
           <%= f.input :nanny_id, input_html: {value: params[:nanny_id]} %>
           <%= f.button :submit %>
