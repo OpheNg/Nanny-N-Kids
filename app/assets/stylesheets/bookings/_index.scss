@@ -1,0 +1,44 @@
+.result-index {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 30px;
+}
+.index-booking {
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  padding: 16px;
+  padding-top: 0;
+  margin: 16px;
+  margin-top: 0;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  max-height: fit-content;
+  max-width: 260px;
+  box-shadow: 2px 1Px 1px rgb(215, 224, 236);
+  position: relative;
+  padding-left: 10px;
+}
+.index-booking li {
+  list-style: none;
+  padding-bottom: 10px;
+}
+.index-booking .prof-links {
+  border: solid lightgray 1px;
+  border-radius: 4px;
+  padding: 6px 10px;
+  text-decoration: none;
+  font-weight: 400;
+  color: rgb(76, 135, 230);
+  bottom: 10px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+

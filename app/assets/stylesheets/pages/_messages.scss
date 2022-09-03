@@ -311,14 +311,16 @@ button, input, optgroup, select, textarea {
 
 .messlink {
   height: 90px;
+
 }
 .messlink a.homemess {
   border: rgb(135, 160, 186) solid 1px;
   border-radius: 4px;
   padding: 6px 10px;
   color: #0A98DD;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  // margin-bottom: 20px;
+  // margin-top: 20px;
+
 }
 .messlink a.homemess:hover{
   color:#0A98DD ;
