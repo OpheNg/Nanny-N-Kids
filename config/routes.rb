@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   #création d'une nouvelle route pour avoir un url de type /users/1 qui redirige vers la page dashboard
   get '/users/:id', to: 'users#dashboard', as: 'user'
 
+  get 'messages', to: 'pages#messages'
 
 
   resources :nannies

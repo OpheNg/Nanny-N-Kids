@@ -1,17 +1,28 @@
-<div>
-    <h1>Booking <strong>n°</b><%= @booking.id %></strong></h1>
+
+<%# <div>
+    <h1>Booking <strong>n°</b><%= @booking.id %>
+
+<h1 class="right-text"> Your reservation  <i class="fa-sharp fa-solid fa-user-pen"></i></h1>
+
+<div class="delete-booking">
+     <div class="recap-booking">
+
+<h2>Nanny Informations</h2>
+<br>
+<div class="info-text">
+<p><i class="fa-solid fa-tag"></i> Nanny n° : <b><%= @booking.nanny.id %></p></b>
+<hr>
+<p><i class="fa-solid fa-user"></i> Nanny Name : <b><%= @booking.nanny.first_name %> <%= @booking.nanny.last_name %></p></b>
+<hr>
+<p><i class="fa-solid fa-pencil"></i> Nanny description : <b><%= @booking.nanny.description %></b></p>
+<hr>
+<p><i class="fa-solid fa-money-bill"></i> Nanny Price per day : <b><%= @booking.nanny.price_per_day%>€</b></p>
+<hr>
 </div>
+    </div>
 
-<h2>Your nanny</h2>
-<ul>
-<li>Nanny n° : <%= @booking.nanny.id %></li>
-<li>Nanny First Name : <%= @booking.nanny.first_name %></li>
-<li>Nanny Last Name : <%= @booking.nanny.last_name %></li>
-<li>Nanny description : <%= @booking.nanny.description %></li>
-<li>Nanny Price per day : <%= @booking.nanny.price_per_day %></li>
-</ul>
 
-<div>
+<div class="date-booking">
     <h2>Dates 🗓️</h2>
         <style type="text/css">
         .tg  {border-collapse:collapse;border-spacing:0;}
@@ -22,35 +33,21 @@
         .tg .tg-baqh{text-align:center;vertical-align:top}
     .tg .tg-0lax{text-align:left;vertical-align:top}
         </style>
-</div>
-
 <br>
-
-<div>
-    <table class="tg">
-        <thead>
-        <tr>
-            <th class="tg-baqh">From :</th>
-            <th class="tg-0lax">To :</th>
-        </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="tg-0lax"><%= @booking.start_date %></td>
-                <td class="tg-0lax"><%= @booking.end_date %></td>
-            </tr>
-        </tbody>
-    </table>
+    <p><i class="fa-sharp fa-solid fa-calendar"></i> From : <b><%= @booking.start_date %></b></p>
+    <p><i class="fa-solid fa-building-circle-check"></i> To : <b><%= @booking.end_date %></b></p>
 </div>
 
 <br>
 
 
-
-<div>
+<div class="price-booking">
     <h2>Total Price 💸</h2>
     <p><%= (@booking.end_date.mjd - @booking.start_date.mjd + 1) * @booking.nanny.price_per_day %> €</p>
 </div>
 
+
+ <div class="backtoindex">
 <%= link_to "Back to Index", bookings_path %>
-<%= link_to "Back", :back %>
+</div>
+</div>

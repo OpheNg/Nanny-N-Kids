@@ -1,0 +1,68 @@
+
+.delete-booking{
+
+  padding: 24px;
+  margin: 0 auto;
+  width: 100%;
+  background-image: url('https://res.cloudinary.com/dpn2f5kbj/image/upload/c_crop,o_15,w_5780/v1662190529/AdobeStock_482355298_fgxiz5.jpg');
+
+  background-size:contain;
+  background-position: center;
+  height: 800px;
+
+}
+
+.recap-booking {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.info-text {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.date-booking {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.tg {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.price-booking {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+
+}
+
+.recap-booking p{
+  padding: 6px;
+  padding-left: 0;
+}
+
+.backtoindex{
+  padding: 20px 30px;
+  height: 60px;
+}
+
+
+.backtoindex a{
+  border: rgb(135, 160, 186) solid 1px;
+  border-radius: 4px;
+  padding: 6px 10px;
+  color: #0A98DD;
+  align-items: center;
+
+}
+.backtoindex a:hover{
+  color:#0A98DD ;
+  border: rgb(82, 99, 150) solid 1px;
+  font-weight: 700;
+}
