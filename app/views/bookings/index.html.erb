@@ -3,27 +3,23 @@
   <% @bookings.each do |booking| %>
   <div class="index-booking">
   <br>
-    <strong><%= link_to "Booking number", booking_path(booking.id) %> <%= booking.id %></strong></li>
+    <li><%= link_to "Booking number", booking_path(booking.id) %> <%= booking.id %></li>
     <br/>
-    <li>Price par day : <%= booking.nanny.price_per_day %>
-    <li>Start date : <%=  booking.start_date %></li>
-    <li>End date : <%= booking.end_date %></li>
-    <li>Status : <%= booking.status %></li>
-    <li>Price :index_vers_la_droite: <%= (booking.end_date.mjd - booking.start_date.mjd + 1) * booking.nanny.price_per_day %>€</li>
-    <div class="prof-links">
+    <li> <i class="fa-solid fa-hand-holding-dollar"></i> Price par day : <%= booking.nanny.price_per_day %>
+    <li> <i class="fa-solid fa-calendar-days"></i> Start date : <%=  booking.start_date %></li>
+    <li> <i class="fa-solid fa-calendar-days"></i> End date : <%= booking.end_date %></li>
+    <li> <i class="fa-duotone fa-signal-bars"></i> Status : <%= booking.status %></li>
+    <li> Total price :index_vers_la_droite: <%= (booking.end_date.mjd - booking.start_date.mjd + 1) * booking.nanny.price_per_day %>€</li>
+    <br>
+    <div class="prof-links-index">
     <% if booking.user == current_user %>
     <%= link_to "Edit the booking", edit_booking_path(booking.user.id, booking.id) %>
     </div>
-    <div class="prof-links">
+    <br>
+    <div class="prof-links-index">
     <%= link_to "Delete", booking_path(booking.user.id, booking.id), method: :delete, data: { confirm: "Are you sure?" } %>
     <% end %>
     </div>
   </div>
     <% end %>
 </div>
-<%= link_to "Back", :back %>
-
-
-
-
-
