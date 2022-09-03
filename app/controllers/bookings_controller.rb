@@ -20,16 +20,15 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-
+    @nanny = Nanny.find(params[:nanny_id])
     @user = current_user
     @booking.user = current_user
     authorize @booking
 
-      #Condition pour ne pas créer des réservations aujourd'hui ou plus tard et date de fin après date départ
-      if @booking.start_date >= Date.today && @booking.start_date <= @booking.end_date
-          @booking.save
-          redirect_to bookings_path
+      if @booking.save
+         redirect_to bookings_path
       else
+        render :new
       end
   end
 
@@ -49,6 +48,7 @@ class BookingsController < ApplicationController
     if @booking.update(booking_params_update)
       redirect_to booking_path
     else
+        render :edit
     end
   end
 
